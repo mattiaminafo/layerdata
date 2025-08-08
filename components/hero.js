@@ -37,7 +37,14 @@ export default function Hero() {
           }
         `}</style>
         <div className="mb-16">
-          <Button cta="Prenota ora il tuo audit" />
+          <a 
+            href="https://calendar.notion.so/meet/mattiaminaf/of3pa4oup"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-active btn-secondary text-xl font-poppins font-semibold"
+          >
+            Prenota ora il tuo audit
+          </a>
         </div>
       </div>
       

@@ -51,7 +51,8 @@ export default function CaseStudy() {
     <section className="py-24 flex flex-col items-center">
       <h2 className="text-3xl font-bold mb-16 font-gotham">Case Studies</h2>
       
-      <div className="relative w-full max-w-7xl mx-auto px-4">
+      {/* Desktop Carousel */}
+      <div className="hidden md:block relative w-full max-w-7xl mx-auto px-4">
         {/* Controlli di navigazione */}
         <button
           onClick={prevSlide}
@@ -107,18 +108,38 @@ export default function CaseStudy() {
         </div>
       </div>
 
+      {/* Mobile Cards */}
+      <div className="md:hidden w-full px-4">
+        <div className="flex flex-col gap-6">
+          {caseStudies.map((study, index) => (
+            <div key={index} className="bg-base-100 p-6 rounded-xl shadow-lg flex flex-col">
+              <h3 className="font-bold text-lg mb-3">{study.title}</h3>
+              <p className="text-sm leading-relaxed flex-grow mb-4">{study.short}</p>
+              <button
+                className="px-6 py-3 rounded-lg font-semibold bg-black text-white hover:bg-gray-900 transition-colors w-full text-base"
+                onClick={() => setOpen(index)}
+              >
+                Scopri di più
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Modale */}
       {open !== null && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-base-100 p-8 rounded-xl max-w-lg w-full relative">
-            <button className="absolute top-2 right-2 btn btn-sm" onClick={() => setOpen(null)}>✕</button>
-            <h3 className="font-bold text-2xl mb-4">{caseStudies[open].title}</h3>
-            <p className="mb-4">{caseStudies[open].long}</p>
-            <div className="space-y-2">
-              <p><strong>Cliente:</strong> {caseStudies[open].client}</p>
-              <p><strong>Durata:</strong> {caseStudies[open].duration}</p>
-              <p><strong>Risultati:</strong> {caseStudies[open].results}</p>
-              <p><strong>Tecnologie:</strong> {caseStudies[open].technologies.join(", ")}</p>
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-3">
+          <div className="bg-base-100 p-4 rounded-xl w-[90%] max-w-sm relative max-h-[70vh] overflow-hidden flex flex-col">
+            <button className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-xl font-bold transition-colors z-10" onClick={() => setOpen(null)}>✕</button>
+            <h3 className="font-bold text-base mb-3 pr-8">{caseStudies[open].title}</h3>
+            <div className="flex-1 overflow-y-auto space-y-2">
+              <p className="text-xs leading-relaxed">{caseStudies[open].long}</p>
+              <div className="space-y-1 pt-2 border-t border-gray-200">
+                <p className="text-xs"><strong>Cliente:</strong> {caseStudies[open].client}</p>
+                <p className="text-xs"><strong>Durata:</strong> {caseStudies[open].duration}</p>
+                <p className="text-xs"><strong>Risultati:</strong> {caseStudies[open].results}</p>
+                <p className="text-xs"><strong>Tecnologie:</strong> {caseStudies[open].technologies.join(", ")}</p>
+              </div>
             </div>
           </div>
         </div>
