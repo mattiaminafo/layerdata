@@ -37,9 +37,14 @@ export default function Header() {
           </a>
 
           {/* Community button */}
-          <button className="btn btn-outline border-gray-300 text-gray-700 hover:bg-gray-100 hover:text-black text-lg font-poppins font-semibold px-6 py-3">
+          <a 
+            href="https://substack.com/@nullfactory"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-outline border-gray-300 text-gray-700 hover:bg-gray-100 hover:text-black text-lg font-poppins font-semibold px-6 py-3"
+          >
             Scopri la nostra community
-          </button>
+          </a>
 
           {/* Black trembling button - Non so cosa mi serve */}
           <button 
@@ -78,12 +83,15 @@ export default function Header() {
           </a>
 
           {/* Community button */}
-          <button 
+          <a 
+            href="https://substack.com/@nullfactory"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn btn-outline border-gray-300 text-gray-700 hover:bg-gray-100 hover:text-black text-base font-poppins font-semibold w-full"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Scopri la nostra community
-          </button>
+          </a>
 
           {/* Black trembling button - Non so cosa mi serve */}
           <button 
