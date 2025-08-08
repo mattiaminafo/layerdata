@@ -1,0 +1,128 @@
+"use client";
+import { useState } from "react";
+
+const caseStudies = [
+  {
+    title: "E-commerce Fashion",
+    short: "Incremento conversioni tramite dashboard e automazioni. Abbiamo implementato una dashboard centralizzata e automazioni di marketing per un e-commerce fashion, portando a un aumento del 30% delle conversioni in 3 mesi.",
+    long: "Abbiamo implementato una dashboard centralizzata e automazioni di marketing per un e-commerce fashion, portando a un aumento del 30% delle conversioni in 3 mesi. Integrazione con GA4, Meta API e automazioni email personalizzate.",
+    client: "Fashion Brand",
+    duration: "3 mesi",
+    results: "+30% conversioni",
+    technologies: ["GA4", "Meta API", "Automazioni"],
+  },
+  {
+    title: "SaaS B2B",
+    short: "Centralizzazione dati e insight per la crescita. Per una SaaS B2B abbiamo centralizzato i dati di vendita e prodotto, generando insight strategici che hanno guidato nuove campagne e ottimizzato il funnel di vendita.",
+    long: "Per una SaaS B2B abbiamo centralizzato i dati di vendita e prodotto, generando insight strategici che hanno guidato nuove campagne e ottimizzato il funnel di vendita.",
+    client: "SaaS Company",
+    duration: "6 mesi",
+    results: "Nuove campagne + ottimizzazione funnel",
+    technologies: ["Data Warehouse", "Dashboard", "Automazioni"],
+  },
+  {
+    title: "Marketplace Food",
+    short: "Tracking avanzato e segmentazione utenti. Implementazione di tracking avanzato e segmentazione comportamentale per un marketplace food, migliorando la retention e la personalizzazione delle offerte.",
+    long: "Implementazione di tracking avanzato e segmentazione comportamentale per un marketplace food, migliorando la retention e la personalizzazione delle offerte.",
+    client: "Marketplace Food",
+    duration: "4 mesi",
+    results: "+20% retention",
+    technologies: ["GA4", "Segmentazione", "Personalizzazione"],
+  },
+];
+
+export default function CaseStudy() {
+  const [open, setOpen] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % caseStudies.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + caseStudies.length) % caseStudies.length);
+  };
+
+  const getCardIndex = (offset) => {
+    return (currentIndex + offset + caseStudies.length) % caseStudies.length;
+  };
+
+  return (
+    <section className="py-24 flex flex-col items-center">
+      <h2 className="text-3xl font-bold mb-16 font-gotham">Case Studies</h2>
+      
+      <div className="relative w-full max-w-7xl mx-auto px-4">
+        {/* Controlli di navigazione */}
+        <button
+          onClick={prevSlide}
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-black text-white p-3 rounded-full hover:bg-gray-900 transition-colors"
+        >
+          ←
+        </button>
+        <button
+          onClick={nextSlide}
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-black text-white p-3 rounded-full hover:bg-gray-900 transition-colors"
+        >
+          →
+        </button>
+
+        {/* Carosello con 3 card visibili */}
+        <div className="flex justify-center items-center gap-6">
+          {/* Card precedente */}
+          <div className="w-1/4 bg-base-100 p-8 rounded-xl shadow-lg opacity-60 scale-75 transform transition-all duration-300 min-h-[50vh] flex flex-col">
+            <h3 className="font-bold text-xl mb-4">{caseStudies[getCardIndex(-1)].title}</h3>
+            <p className="text-base leading-relaxed flex-grow">{caseStudies[getCardIndex(-1)].short}</p>
+          </div>
+
+          {/* Card centrale (attiva) */}
+          <div className="w-1/2 bg-base-100 p-12 rounded-xl shadow-xl flex flex-col min-h-[60vh]">
+            <h3 className="font-bold text-3xl mb-6">{caseStudies[currentIndex].title}</h3>
+            <p className="mb-8 flex-grow text-xl leading-relaxed">{caseStudies[currentIndex].short}</p>
+            <button
+              className="px-8 py-4 rounded-lg font-semibold bg-black text-white hover:bg-gray-900 transition-colors w-full text-lg"
+              onClick={() => setOpen(currentIndex)}
+            >
+              Scopri di più
+            </button>
+          </div>
+
+          {/* Card successiva */}
+          <div className="w-1/4 bg-base-100 p-8 rounded-xl shadow-lg opacity-60 scale-75 transform transition-all duration-300 min-h-[50vh] flex flex-col">
+            <h3 className="font-bold text-xl mb-4">{caseStudies[getCardIndex(1)].title}</h3>
+            <p className="text-base leading-relaxed flex-grow">{caseStudies[getCardIndex(1)].short}</p>
+          </div>
+        </div>
+
+        {/* Indicatori */}
+        <div className="flex justify-center mt-8 space-x-3">
+          {caseStudies.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-4 h-4 rounded-full ${
+                index === currentIndex ? 'bg-black' : 'bg-gray-300'
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Modale */}
+      {open !== null && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-base-100 p-8 rounded-xl max-w-lg w-full relative">
+            <button className="absolute top-2 right-2 btn btn-sm" onClick={() => setOpen(null)}>✕</button>
+            <h3 className="font-bold text-2xl mb-4">{caseStudies[open].title}</h3>
+            <p className="mb-4">{caseStudies[open].long}</p>
+            <div className="space-y-2">
+              <p><strong>Cliente:</strong> {caseStudies[open].client}</p>
+              <p><strong>Durata:</strong> {caseStudies[open].duration}</p>
+              <p><strong>Risultati:</strong> {caseStudies[open].results}</p>
+              <p><strong>Tecnologie:</strong> {caseStudies[open].technologies.join(", ")}</p>
+            </div>
+          </div>
+        </div>
+      )}
+    </section>
+  );
+}

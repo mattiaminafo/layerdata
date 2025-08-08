@@ -1,7 +1,19 @@
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({ subsets: ["latin"], weight: ["400", "700"] });
+
+const gotham = localFont({
+  src: [
+    {
+      path: "../public/fonts/gotham-bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-gotham",
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -10,8 +22,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" data-theme="cyberpunk" className={`${poppins.className} ${gotham.variable}`}>
+      <body>{children}</body>
     </html>
   );
 }
