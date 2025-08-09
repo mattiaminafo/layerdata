@@ -4,6 +4,7 @@ import Packages from "../components/packages";
 import Tripwires from "../components/tripwires";
 import CaseStudy from "../components/casestudy";
 import AboutUs from "../components/aboutus";
+import Footer from "../components/footer";
 
 export default function Page() {
   return (
@@ -26,6 +27,8 @@ export default function Page() {
       <div className="py-24">
         <AboutUs />
       </div>
+
+      <Footer />
     </div>
   );
 }
