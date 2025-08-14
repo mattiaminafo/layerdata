@@ -77,7 +77,7 @@ export default function Packages() {
               key={pkg.name}
               className="bg-base-100 rounded-2xl shadow-xl flex flex-col items-center p-6 sm:p-8 md:p-10 w-full md:flex-1 md:min-w-[280px] max-w-md border border-base-200"
             >
-              <div className="text-xl font-semibold mb-4 font-poppins px-6 py-3 rounded-lg text-white" style={{backgroundColor: '#41cadf'}}>{pkg.name}</div>
+              <div className="text-xl font-semibold mb-4 font-poppins px-6 py-3 rounded-lg text-black" style={{backgroundColor: '#41cadf'}}>{pkg.name}</div>
               <div className="text-4xl font-bold font-gotham mb-2">€{pkg.price}</div>
               <div className="text-base mb-6 text-gray-500">{pkg.period}</div>
               

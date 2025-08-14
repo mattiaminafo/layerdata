@@ -5,7 +5,7 @@ import { InfoModal } from "./modals";
 export default function Header() {
   const [isTrembling, setIsTrembling] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isFormazioneModalOpen, setIsFormazioneModalOpen] = useState(false);
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -52,12 +52,12 @@ export default function Header() {
               >
                 Servizi
               </a>
-              <button 
-                onClick={() => setIsFormazioneModalOpen(true)}
+              <a 
+                href="/trainings"
                 className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-black transition-colors border-t border-gray-100 text-sm"
               >
                 Formazione
-              </button>
+              </a>
             </div>
           </div>
 
@@ -119,15 +119,13 @@ export default function Header() {
             >
               Servizi
             </a>
-            <button 
+            <a 
+              href="/trainings"
               className="btn btn-outline border-gray-300 text-gray-700 hover:bg-gray-100 hover:text-black text-sm font-poppins font-semibold w-full py-2"
-              onClick={() => {
-                setIsFormazioneModalOpen(true);
-                setIsMobileMenuOpen(false);
-              }}
+              onClick={() => setIsMobileMenuOpen(false)}
             >
               Formazione
-            </button>
+            </a>
           </div>
 
           {/* Open Innovation */}
@@ -179,20 +177,7 @@ export default function Header() {
   size="sm"
 />
 
-      {/* Modal - Formazione */}
-      <InfoModal 
-        isOpen={isFormazioneModalOpen}
-        onClose={() => setIsFormazioneModalOpen(false)}
-        title="Formazione e Training del Team"
-        content="Trasformiamo il tuo team in esperti di marketing technology e data analytics. I nostri corsi personalizzati e workshop pratici ti permettono di sfruttare al massimo gli strumenti e i dati a tua disposizione."
-        details={[
-          { label: "🎓", value: "Corsi personalizzati per il tuo team" },
-          { label: "🛠️", value: "Workshop pratici su strumenti specifici" },
-          { label: "📈", value: "Training su analytics e reporting" },
-          { label: "🚀", value: "Certificazioni riconosciute nel settore" }
-        ]}
-        size="sm"
-      />
+
     </header>
   );
 }

@@ -1,6 +1,6 @@
 export default function OurExpertise() {
   return (
-    <section className="w-full py-48">
+    <section id="our-expertise" className="w-full py-24">
       <div className="max-w-6xl mx-auto px-4">
         {/* Bottone con effetto speciale */}
         <div className="text-center mb-16">
@@ -24,7 +24,7 @@ export default function OurExpertise() {
                 </p>
               </div>
               <a 
-                href="#marketing-technology"
+                href="/servizi"
                 className="ml-6 text-2xl text-black font-bold hover:text-black/70 transition-colors cursor-pointer"
               >
                 →
@@ -44,7 +44,9 @@ export default function OurExpertise() {
                 </p>
               </div>
               <a 
-                href="#martech-innovation"
+                href="https://substack.com/@layerdata"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="ml-6 text-2xl text-black font-bold hover:text-black/70 transition-colors cursor-pointer"
               >
                 →

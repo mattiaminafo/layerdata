@@ -127,7 +127,7 @@ export default function Tripwires() {
                   >
                     <div className="card-body p-0">
                       <div className="text-sm font-medium text-gray-500 mb-2">{tripwire.category}</div>
-                      <div className="text-xl font-semibold mb-2 font-poppins px-2 py-3 rounded-lg text-white" style={{backgroundColor: '#41cadf'}}>{tripwire.title}</div>
+                      <button className="text-xl font-semibold mb-2 font-poppins px-2 py-3 rounded-full text-black w-full" style={{backgroundColor: '#41cadf'}}>{tripwire.title}</button>
                       <div className="text-3xl font-bold font-gotham mb-2">{tripwire.price}</div>
                       <div className="text-base mb-4 text-gray-500">{tripwire.period}</div>
                       <div className="text-base text-center mb-6">{tripwire.description}</div>
@@ -164,7 +164,7 @@ export default function Tripwires() {
               className="bg-base-100 p-8 rounded-xl shadow-xl flex flex-col items-center min-w-[320px] flex-shrink-0 border border-base-200"
             >
               <div className="text-xs font-medium text-gray-500 mb-2">{service.category}</div>
-              <div className="text-lg font-semibold mb-3 font-poppins text-secondary text-center">{service.title}</div>
+              <button className="text-lg font-semibold mb-3 font-poppins px-2 py-3 rounded-full text-black w-full" style={{backgroundColor: '#41cadf'}}>{service.title}</button>
               <div className="text-2xl font-bold font-gotham mb-2">{service.price}</div>
               <div className="text-sm mb-4 text-gray-500">{service.period}</div>
               <div className="text-sm text-center mb-6">{service.description}</div>

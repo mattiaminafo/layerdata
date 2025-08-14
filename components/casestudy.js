@@ -48,8 +48,8 @@ export default function CaseStudy() {
   };
 
   return (
-    <section className="py-24 flex flex-col items-center">
-      <h2 className="text-3xl font-bold mb-16 font-gotham">Case Studies</h2>
+    <section className="py-12 sm:py-16 md:py-20 lg:py-24 flex flex-col items-center">
+      <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 md:mb-16 font-gotham">Case Studies</h2>
       
       {/* Desktop Carousel */}
       <div className="hidden md:block relative w-full max-w-7xl mx-auto px-4">
@@ -70,17 +70,17 @@ export default function CaseStudy() {
         {/* Carosello con 3 card visibili */}
         <div className="flex justify-center items-center gap-6">
           {/* Card precedente */}
-          <div className="w-1/4 bg-base-100 p-8 rounded-xl shadow-lg opacity-60 scale-75 transform transition-all duration-300 min-h-[50vh] flex flex-col">
-            <h3 className="font-bold text-xl mb-4">{caseStudies[getCardIndex(-1)].title}</h3>
-            <p className="text-base leading-relaxed flex-grow">{caseStudies[getCardIndex(-1)].short}</p>
+          <div className="w-1/4 bg-base-100 p-6 sm:p-8 rounded-xl shadow-lg opacity-60 scale-75 transform transition-all duration-300 min-h-[50vh] flex flex-col">
+            <h3 className="font-bold text-lg sm:text-xl mb-3 sm:mb-4">{caseStudies[getCardIndex(-1)].title}</h3>
+            <p className="text-sm sm:text-base leading-relaxed flex-grow">{caseStudies[getCardIndex(-1)].short}</p>
           </div>
 
           {/* Card centrale (attiva) */}
-          <div className="w-1/2 bg-base-100 p-12 rounded-xl shadow-xl flex flex-col min-h-[60vh]">
-            <h3 className="font-bold text-3xl mb-6">{caseStudies[currentIndex].title}</h3>
-            <p className="mb-8 flex-grow text-xl leading-relaxed">{caseStudies[currentIndex].short}</p>
+          <div className="w-1/2 bg-base-100 p-8 sm:p-10 md:p-12 rounded-xl shadow-xl flex flex-col min-h-[60vh]">
+            <h3 className="font-bold text-2xl sm:text-3xl mb-4 sm:mb-6">{caseStudies[currentIndex].title}</h3>
+            <p className="mb-6 sm:mb-8 flex-grow text-lg sm:text-xl leading-relaxed">{caseStudies[currentIndex].short}</p>
             <button
-              className="px-8 py-4 rounded-lg font-semibold bg-black text-white hover:bg-gray-900 transition-colors w-full text-lg"
+              className="px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold bg-black text-white hover:bg-gray-900 transition-colors w-full text-base sm:text-lg"
               onClick={() => setOpen(currentIndex)}
             >
               Scopri di più
@@ -88,14 +88,14 @@ export default function CaseStudy() {
           </div>
 
           {/* Card successiva */}
-          <div className="w-1/4 bg-base-100 p-8 rounded-xl shadow-lg opacity-60 scale-75 transform transition-all duration-300 min-h-[50vh] flex flex-col">
-            <h3 className="font-bold text-xl mb-4">{caseStudies[getCardIndex(1)].title}</h3>
-            <p className="text-base leading-relaxed flex-grow">{caseStudies[getCardIndex(1)].short}</p>
+          <div className="w-1/4 bg-base-100 p-6 sm:p-8 rounded-xl shadow-lg opacity-60 scale-75 transform transition-all duration-300 min-h-[50vh] flex flex-col">
+            <h3 className="font-bold text-lg sm:text-xl mb-3 sm:mb-4">{caseStudies[getCardIndex(1)].title}</h3>
+            <p className="text-sm sm:text-base leading-relaxed flex-grow">{caseStudies[getCardIndex(1)].short}</p>
           </div>
         </div>
 
         {/* Indicatori */}
-        <div className="flex justify-center mt-8 space-x-3">
+        <div className="flex justify-center mt-6 sm:mt-8 space-x-2 sm:space-x-3">
           {caseStudies.map((_, index) => (
             <button
               key={index}
@@ -110,13 +110,13 @@ export default function CaseStudy() {
 
       {/* Mobile Cards */}
       <div className="md:hidden w-full px-4">
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-4 sm:gap-6">
           {caseStudies.map((study, index) => (
-            <div key={index} className="bg-base-100 p-6 rounded-xl shadow-lg flex flex-col">
-              <h3 className="font-bold text-lg mb-3">{study.title}</h3>
-              <p className="text-sm leading-relaxed flex-grow mb-4">{study.short}</p>
+            <div key={index} className="bg-base-100 p-4 sm:p-6 rounded-xl shadow-lg flex flex-col">
+              <h3 className="font-bold text-base sm:text-lg mb-2 sm:mb-3">{study.title}</h3>
+              <p className="text-xs sm:text-sm leading-relaxed flex-grow mb-3 sm:mb-4">{study.short}</p>
               <button
-                className="px-6 py-3 rounded-lg font-semibold bg-black text-white hover:bg-gray-900 transition-colors w-full text-base"
+                className="px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold bg-black text-white hover:bg-gray-900 transition-colors w-full text-sm sm:text-base"
                 onClick={() => setOpen(index)}
               >
                 Scopri di più

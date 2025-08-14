@@ -172,7 +172,13 @@ export default function Clients() {
           }
         }
         .animate-scroll {
-          animation: scroll 30s linear infinite;
+          animation: scroll 12s linear infinite;
+        }
+        
+        @media (max-width: 768px) {
+          .animate-scroll {
+            animation: scroll 4s linear infinite;
+          }
         }
       `}</style>
     </section>

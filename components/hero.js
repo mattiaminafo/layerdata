@@ -42,21 +42,27 @@ export default function Hero() {
         </p>
         
         <div className="mb-4 sm:mb-8 md:mb-12 flex flex-col sm:flex-row gap-3 sm:gap-4 items-center">
+          <button 
+            onClick={() => {
+              document.getElementById('our-expertise').scrollIntoView({ 
+                behavior: 'smooth' 
+              });
+            }}
+            className="btn btn-active btn-secondary text-base sm:text-lg md:text-xl font-poppins font-semibold px-4 py-3 sm:px-6 sm:py-4 w-full sm:w-auto text-center rounded-full flex items-center justify-center leading-none cursor-pointer"
+            style={{ lineHeight: '1', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+          >
+            Scopri i nostri servizi
+          </button>
+          
           <a 
-            href="https://calendar.notion.so/meet/mattiaminaf/of3pa4oup"
+            href="https://substack.com/@layerdata"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-active btn-secondary text-base sm:text-lg md:text-xl font-poppins font-semibold px-4 py-3 sm:px-6 sm:py-4 w-full sm:w-auto text-center rounded-full flex items-center justify-center leading-none"
+            className="btn btn-outline border-black bg-black text-white hover:bg-black hover:text-white text-base sm:text-lg md:text-xl font-poppins font-semibold px-4 py-3 sm:px-6 sm:py-4 w-full sm:w-auto text-center rounded-full flex items-center justify-center leading-none"
             style={{ lineHeight: '1', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
           >
-            I servizi per le aziende che vogliono crescere
+            Scopri la community
           </a>
-          
-          <button className="btn btn-outline border-black bg-black text-white hover:bg-black hover:text-white text-base sm:text-lg md:text-xl font-poppins font-semibold px-4 py-3 sm:px-6 sm:py-4 w-full sm:w-auto text-center rounded-full flex items-center justify-center leading-none"
-            style={{ lineHeight: '1', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-          >
-            Opportunità per le aziende che vogliono innovare
-          </button>
         </div>
         
       </div>
