@@ -66,7 +66,7 @@ export default function OurExpertise() {
                 </p>
               </div>
               <a 
-                href="#training-workshops"
+                href="/trainings"
                 className="ml-6 text-2xl text-black font-bold hover:text-black/70 transition-colors cursor-pointer"
               >
                 →
