@@ -65,19 +65,19 @@ export default function Packages() {
 
   return (
     <section className="w-full py-10 bg-transparent">
-      <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-10 text-center leading-tight">
+      <div className="max-w-6xl mx-auto px-4 text-center">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 sm:mb-8 md:mb-10 text-center leading-tight">
           Dai 3 ai 5 mesi Creiamo La Tua Macchina per la Crescita
         </h2>
-        <h3 className="text-xl md:text-2xl mb-16 text-center">Scegli il tuo pacchetto</h3>
+        <h3 className="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-12 md:mb-16 text-center">Scegli il tuo pacchetto</h3>
 
-        <div className="w-full flex flex-col md:flex-row justify-center items-stretch gap-12">
+        <div className="w-full flex flex-col md:flex-row justify-center items-center md:items-stretch gap-6 sm:gap-8 md:gap-12">
           {packages.map((pkg, idx) => (
             <div
               key={pkg.name}
-              className="bg-base-100 rounded-2xl shadow-xl flex flex-col items-center p-10 flex-1 min-w-[280px] max-w-md border border-base-200"
+              className="bg-base-100 rounded-2xl shadow-xl flex flex-col items-center p-6 sm:p-8 md:p-10 w-full md:flex-1 md:min-w-[280px] max-w-md border border-base-200"
             >
-              <div className="text-xl font-semibold mb-4 font-poppins text-secondary">{pkg.name}</div>
+              <div className="text-xl font-semibold mb-4 font-poppins px-6 py-3 rounded-lg text-white" style={{backgroundColor: '#41cadf'}}>{pkg.name}</div>
               <div className="text-4xl font-bold font-gotham mb-2">€{pkg.price}</div>
               <div className="text-base mb-6 text-gray-500">{pkg.period}</div>
               

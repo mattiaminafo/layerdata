@@ -40,7 +40,7 @@ export default function AboutUs() {
           {team.map((member, index) => (
             <div key={member.name} className="bg-base-100 p-10 rounded-xl shadow-lg flex flex-col items-center text-center">
               <h3 className="text-2xl font-bold mb-4 font-gotham">{member.name}</h3>
-              <p className="text-lg text-secondary mb-6 font-poppins">{member.role}</p>
+              <p className="text-lg text-white mb-6 font-poppins px-4 py-2 rounded-full" style={{backgroundColor: '#41cadf'}}>{member.role}</p>
               
               <p className="text-base leading-relaxed mb-8">
                 {member.description}

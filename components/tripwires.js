@@ -4,7 +4,7 @@ import Button from "./button";
 
 const tripwires = [
   {
-    title: "Shopify Tracking | CustomPixel",
+    title: "Shopify Tracking",
     price: "€3000",
     period: "one shot",
     description: " Creiamo il tracciamento Shopify che funziona!",
@@ -76,7 +76,7 @@ export default function Tripwires() {
 
   return (
     <section className="w-full py-24 flex flex-col items-center bg-transparent">
-      <h2 className="text-3xl font-bold text-center mb-16 font-gotham">Il pacchetto non è ciò che fa per te? Ecco una serie di servizi singoli:</h2>
+      <h2 className="text-5xl font-bold text-center mb-16 font-gotham">Il pacchetto non è ciò che fa per te? Ecco una serie di servizi singoli:</h2>
       
       {/* Filtri */}
       <div className="w-full max-w-4xl mx-auto px-4 mb-12">
@@ -114,67 +114,39 @@ export default function Tripwires() {
               →
             </button>
 
-            <div className="flex justify-center">
-              <div className="stack w-96">
-                {/* Card corrente (in cima) */}
-                <div
-                  key={filteredTripwires[currentIndex].title}
-                  className="border-base-content card bg-base-100 border text-center p-10 rounded-xl shadow-lg"
-                >
-                  <div className="card-body p-0">
-                    <div className="text-sm font-medium text-gray-500 mb-2">{filteredTripwires[currentIndex].category}</div>
-                    <div className="text-2xl font-semibold mb-3 font-poppins text-secondary">{filteredTripwires[currentIndex].title}</div>
-                    <div className="text-4xl font-bold font-gotham mb-2">{filteredTripwires[currentIndex].price}</div>
-                    <div className="text-base mb-4 text-gray-500">{filteredTripwires[currentIndex].period}</div>
-                    <div className="text-base text-center mb-6">{filteredTripwires[currentIndex].description}</div>
-                    <Button cta="Prenota" />
-                  </div>
-                </div>
-                
-                {/* Card successiva (sotto) */}
-                {filteredTripwires.length > 1 && (
+            {/* Container carosello con 3 card */}
+            <div className="overflow-hidden px-16">
+              <div 
+                className="flex space-x-8 transition-transform duration-300 ease-in-out"
+                style={{ transform: `translateX(-${currentIndex * (320 + 32)}px)` }}
+              >
+                {filteredTripwires.map((tripwire, index) => (
                   <div
-                    key={filteredTripwires[getCardIndex(1)].title}
-                    className="border-base-content card bg-base-100 border text-center p-10 rounded-xl shadow-lg opacity-60"
+                    key={tripwire.title}
+                    className="border-base-content card bg-base-100 border text-center p-8 rounded-xl shadow-lg w-80 flex-shrink-0"
                   >
                     <div className="card-body p-0">
-                      <div className="text-sm font-medium text-gray-500 mb-2">{filteredTripwires[getCardIndex(1)].category}</div>
-                      <div className="text-2xl font-semibold mb-3 font-poppins text-secondary">{filteredTripwires[getCardIndex(1)].title}</div>
-                      <div className="text-4xl font-bold font-gotham mb-2">{filteredTripwires[getCardIndex(1)].price}</div>
-                      <div className="text-base mb-4 text-gray-500">{filteredTripwires[getCardIndex(1)].period}</div>
-                      <div className="text-base text-center mb-6">{filteredTripwires[getCardIndex(1)].description}</div>
+                      <div className="text-sm font-medium text-gray-500 mb-2">{tripwire.category}</div>
+                      <div className="text-xl font-semibold mb-2 font-poppins px-2 py-3 rounded-lg text-white" style={{backgroundColor: '#41cadf'}}>{tripwire.title}</div>
+                      <div className="text-3xl font-bold font-gotham mb-2">{tripwire.price}</div>
+                      <div className="text-base mb-4 text-gray-500">{tripwire.period}</div>
+                      <div className="text-base text-center mb-6">{tripwire.description}</div>
                       <Button cta="Prenota" />
                     </div>
                   </div>
-                )}
-                
-                {/* Card successiva alla successiva (sotto) */}
-                {filteredTripwires.length > 2 && (
-                  <div
-                    key={filteredTripwires[getCardIndex(2)].title}
-                    className="border-base-content card bg-base-100 border text-center p-10 rounded-xl shadow-lg opacity-40"
-                  >
-                    <div className="card-body p-0">
-                      <div className="text-sm font-medium text-gray-500 mb-2">{filteredTripwires[getCardIndex(2)].category}</div>
-                      <div className="text-2xl font-semibold mb-3 font-poppins text-secondary">{filteredTripwires[getCardIndex(2)].title}</div>
-                      <div className="text-4xl font-bold font-gotham mb-2">{filteredTripwires[getCardIndex(2)].price}</div>
-                      <div className="text-base mb-4 text-gray-500">{filteredTripwires[getCardIndex(2)].period}</div>
-                      <div className="text-base text-center mb-6">{filteredTripwires[getCardIndex(2)].description}</div>
-                      <Button cta="Prenota" />
-                    </div>
-                  </div>
-                )}
+                ))}
               </div>
             </div>
 
             {/* Indicatori */}
+            {/* Indicatori di posizione */}
             <div className="flex justify-center mt-12 space-x-3">
-              {filteredTripwires.map((_, index) => (
+              {Array.from({ length: Math.max(1, filteredTripwires.length - 2) }, (_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
-                  className={`w-4 h-4 rounded-full ${
-                    index === currentIndex ? 'bg-black' : 'bg-gray-300'
+                  className={`w-4 h-4 rounded-full transition-colors ${
+                    currentIndex === index ? 'bg-black' : 'bg-gray-300'
                   }`}
                 />
               ))}

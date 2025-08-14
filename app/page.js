@@ -1,33 +1,35 @@
 import Header from "../components/header";
 import Hero from "../components/hero";
-import Packages from "../components/packages";
-import Tripwires from "../components/tripwires";
-import CaseStudy from "../components/casestudy";
-import AboutUs from "../components/aboutus";
+import OurImpact from "../components/ourImpact";
+import OurExpertise from "../components/ourExpertise";
 import Footer from "../components/footer";
+import OurCommunity from "../components/ourCommunity";
+import Skills from "../components/skills";
+import AboutUs from "../components/aboutus";
 
 export default function Page() {
   return (
     <div className="min-h-screen">
       <Header />
       <Hero />
+      <OurImpact />
       
-      <div className="py-32">
-        <Packages />
-      </div>
-      
-      <div className="py-24">
-        <Tripwires />
-      </div>
-      
-      <div className="py-32">
-        <CaseStudy />
-      </div>
-      
-      <div className="py-24">
-        <AboutUs />
+      <div className="py-8 sm:py-16 md:py-24">
+        <OurExpertise />
       </div>
 
+      <div className="py-8 sm:py-16 md:py-24">
+        <OurCommunity />
+      </div>
+
+      <div className="py-8 sm:py-16 md:py-24">
+        <Skills />
+      </div>
+
+      <div className="py-8 sm:py-16 md:py-24">
+        <AboutUs />
+      </div>
+      
       <Footer />
     </div>
   );
