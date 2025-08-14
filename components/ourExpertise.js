@@ -40,7 +40,7 @@ export default function OurExpertise() {
                   Innoviamo Insieme
                 </h3>
                 <p className="text-lg text-black/80 leading-relaxed max-w-4xl">
-                  Dall'idea alla realizzazione, sviluppiamo soluzioni tecnologiche su misura integrando marketing technology e sistemi avanzati per creare vantaggi competitivi concreti.
+                  Dall&apos;idea alla realizzazione, sviluppiamo soluzioni tecnologiche su misura integrando marketing technology e sistemi avanzati per creare vantaggi competitivi concreti.
                 </p>
               </div>
               <a 
@@ -60,7 +60,7 @@ export default function OurExpertise() {
                   Training & Workshops
                 </h3>
                 <p className="text-lg text-black/80 leading-relaxed max-w-4xl">
-                  Percorsi formativi e sessioni pratiche per team aziendali, pensati per trasferire competenze e facilitare l'adozione di processi e tecnologie data-driven.
+                  Percorsi formativi e sessioni pratiche per team aziendali, pensati per trasferire competenze e facilitare l&apos;adozione di processi e tecnologie data-driven.
                 </p>
               </div>
               <a 

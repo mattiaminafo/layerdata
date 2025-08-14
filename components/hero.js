@@ -38,7 +38,7 @@ export default function Hero() {
         `}</style>
         <p className="text-lg sm:text-xl md:text-2xl text-center max-w-7xl mb-4 sm:mb-6 md:mb-12">
           Accompagniamo le aziende nel passaggio verso un modello di business più efficiente, competitivo e orientato ai dati. 
-          L'innovazione in vantaggi misurabili: processi ottimizzati, decisioni più rapide, crescita sostenibile.
+          L&apos;innovazione in vantaggi misurabili: processi ottimizzati, decisioni più rapide, crescita sostenibile.
         </p>
         
         <div className="mb-4 sm:mb-8 md:mb-12 flex flex-col sm:flex-row gap-3 sm:gap-4 items-center">
