@@ -2,15 +2,17 @@ export default function AboutUs() {
   const team = [
     {
       name: "Mattia Minafò",
-      role: "Founder & Technical Lead",
+      role: "Founder & Data Architect",
       description: "Esperto in data engineering e automazioni. Specializzato nella creazione di infrastrutture tecnicamente solide per e-commerce e SaaS. Appassionato di crescita aziendale guidata dai dati.",
-      skills: ["Data Engineering", "Automazioni", "GA4", "GTM", "Python", "SQL"],
+      skills: ["Data Engineering", "Automazioni", "GA4", "GTM", "Python", "SQL","Conversion Optimization","Data Governance"],
+      linkedin: "https://www.linkedin.com/in/mattiaminafo/",
     },
     {
       name: "Enrico Chiolo",
-      role: "Founder & Growth Strategist",
-      description: "Stratega di crescita con focus su ottimizzazione conversioni e customer journey. Esperto in segmentazione comportamentale e personalizzazione avanzata.",
-      skills: ["Growth Strategy", "Conversion Optimization", "Customer Journey", "A/B Testing", "Analytics", "Marketing Automation"],
+      role: "Founder & Analytics Lead",
+      description: "Esperto in strumenti di analytics enterprise, con competenze in raccolta, integrazione e analisi dei dati digitali. Focus su attribuzione, data governance e insight strategici per guidare decisioni di business data-driven.",
+      skills: ["Digital Analytics", "Data Governance", "Attribution Modeling", "Google Tag Manager", "Google Analytics 4", "Data Integration"],
+      linkedin: "https://www.linkedin.com/in/enricochiolo/",
     },
   ];
 
@@ -39,7 +41,20 @@ export default function AboutUs() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 md:gap-12 mt-8 sm:mt-12 md:mt-16">
           {team.map((member, index) => (
             <div key={member.name} className="bg-base-100 p-6 sm:p-8 md:p-10 rounded-xl shadow-lg flex flex-col items-center text-center">
-              <h3 className="text-2xl font-bold mb-4 font-gotham">{member.name}</h3>
+              <div className="flex items-center gap-3 mb-4">
+                <h3 className="text-2xl font-bold font-gotham">{member.name}</h3>
+                <a 
+                  href={member.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-blue-600 transition-colors"
+                  aria-label={`LinkedIn di ${member.name}`}
+                >
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.047-1.852-3.047-1.853 0-2.136 1.445-2.136 2.939v5.677H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  </svg>
+                </a>
+              </div>
               <p className="text-lg text-black mb-6 font-poppins px-4 py-2 rounded-full" style={{backgroundColor: '#41cadf'}}>{member.role}</p>
               
               <p className="text-base leading-relaxed mb-8">
