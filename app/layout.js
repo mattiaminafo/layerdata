@@ -17,7 +17,7 @@ const gotham = localFont({
 
 export const metadata = {
   title: "LayerData",
-  description: "Generiamo la tua macchina per la crescita",
+  description: "Creiamo ordine nei tuoi dati aziendali",
 };
 
 export default function RootLayout({ children }) {
