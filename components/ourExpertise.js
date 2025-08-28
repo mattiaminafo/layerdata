@@ -44,7 +44,7 @@ export default function OurExpertise() {
                 </p>
               </div>
               <a 
-                href="https://substack.com/@layerdata"
+                href="https://layerdata.substack.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="ml-6 text-2xl text-black font-bold hover:text-black/70 transition-colors cursor-pointer"

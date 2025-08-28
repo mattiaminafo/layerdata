@@ -36,7 +36,7 @@ export default function OurCommunity() {
           {/* Button */}
           <div className="p-6 flex flex-col items-center">
             <a 
-              href="https://substack.com/@layerdata"
+              href="https://layerdata.substack.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-active btn-secondary text-xl font-poppins font-semibold rounded-full"

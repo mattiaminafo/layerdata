@@ -63,7 +63,7 @@ export default function Header() {
 
           {/* Open Innovation - No dropdown */}
           <a 
-            href="https://substack.com/@layerdata"
+            href="https://layerdata.substack.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-black hover:text-gray-700 font-medium text-sm py-2.5 px-4 transition-colors"
@@ -134,7 +134,7 @@ export default function Header() {
               Per le aziende che vogliono innovare
             </div>
             <a 
-              href="https://substack.com/@layerdata"
+              href="https://layerdata.substack.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-outline border-gray-300 text-gray-700 hover:bg-gray-100 hover:text-black text-sm font-poppins font-semibold w-full py-2"

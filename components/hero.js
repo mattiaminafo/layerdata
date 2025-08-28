@@ -55,7 +55,7 @@ export default function Hero() {
           </button>
           
           <a 
-            href="https://substack.com/@layerdata"
+            href="https://layerdata.substack.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-outline border-black bg-black text-white hover:bg-black hover:text-white text-base sm:text-lg md:text-xl font-poppins font-semibold px-4 py-3 sm:px-6 sm:py-4 w-full sm:w-auto text-center rounded-full flex items-center justify-center leading-none"
