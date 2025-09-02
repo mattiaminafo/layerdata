@@ -171,7 +171,7 @@ export default function ContactForm() {
 
           {submitStatus === 'error' && (
             <div className="text-center p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
-              <p className="font-bold">Errore nell'invio del messaggio</p>
+              <p className="font-bold">Errore nell&apos;invio del messaggio</p>
               <p className="text-sm">Riprova più tardi o contattaci direttamente.</p>
             </div>
           )}
