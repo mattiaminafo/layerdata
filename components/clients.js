@@ -19,13 +19,14 @@ export default function Clients() {
               />
             </div>
             {/* Loop */}
-            <div className="flex flex-col items-center w-32 sm:w-40 md:w-48">
+            {/* <div className="flex flex-col items-center w-32 sm:w-40 md:w-48">
               <img 
                 src="/images/loop-logo.png" 
                 alt="Loop" 
                 className="w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 object-contain"
               />
-            </div>
+            </div> */}
+            
             {/* L22 */}
             <div className="flex flex-col items-center w-32 sm:w-40 md:w-48">
               <img 
@@ -95,13 +96,13 @@ export default function Clients() {
               />
             </div>
             {/* Loop */}
-            <div className="flex flex-col items-center w-32 sm:w-40 md:w-48">
+            {/* <div className="flex flex-col items-center w-32 sm:w-40 md:w-48">
               <img 
                 src="/images/loop-logo.png" 
                 alt="Loop" 
                 className="w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 object-contain"
               />
-            </div>
+            </div> */}
             {/* L22 */}
             <div className="flex flex-col items-center w-32 sm:w-40 md:w-48">
               <img 
