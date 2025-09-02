@@ -6,6 +6,7 @@ import Footer from "../components/footer";
 import OurCommunity from "../components/ourCommunity";
 import Skills from "../components/skills";
 import AboutUs from "../components/aboutus";
+import ContactForm from "../components/contactForm";
 
 export default function Page() {
   return (
@@ -30,6 +31,7 @@ export default function Page() {
         <AboutUs />
       </div>
       
+      <ContactForm />
       <Footer />
     </div>
   );
