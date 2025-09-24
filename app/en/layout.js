@@ -19,6 +19,11 @@ export const metadata = {
   title: "LayerData - Marketing Technology Solutions",
   description: "We create order in your business data. Advanced marketing technology, data analytics, and automation solutions for growing companies.",
   keywords: "marketing technology, data analytics, automation, GA4, GTM, business intelligence",
+  icons: {
+    icon: '/layerdata_logo.png',
+    shortcut: '/layerdata_logo.png',
+    apple: '/layerdata_logo.png',
+  },
   openGraph: {
     title: "LayerData - Marketing Technology Solutions",
     description: "We create order in your business data. Advanced marketing technology, data analytics, and automation solutions for growing companies.",

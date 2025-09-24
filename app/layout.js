@@ -18,6 +18,11 @@ const gotham = localFont({
 export const metadata = {
   title: "LayerData",
   description: "We create order in your business data",
+  icons: {
+    icon: '/layerdata_logo.png',
+    shortcut: '/layerdata_logo.png',
+    apple: '/layerdata_logo.png',
+  },
 };
 
 export default function RootLayout({ children }) {
