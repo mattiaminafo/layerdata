@@ -2,9 +2,11 @@
 
 import { useEffect, useState } from "react";
 import Button from "./button";
+import { useTranslations } from "../lib/useTranslations";
 
 export default function ServiceHeader() {
-  const fullText = "I Nostri Servizi";
+  const { t } = useTranslations();
+  const fullText = t('serviceHeader.title');
   const [displayed, setDisplayed] = useState("");
 
   useEffect(() => {
@@ -27,8 +29,7 @@ export default function ServiceHeader() {
         </h1>
         
         <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-black/90 mb-6 sm:mb-8 md:mb-12 max-w-4xl mx-auto leading-relaxed">
-          Trasformiamo la tua azienda attraverso soluzioni innovative di Marketing Technology, 
-          automazioni avanzate e formazione specializzata
+          {t('serviceHeader.subtitle')}
         </p>
         
         {/* Button */}
@@ -41,7 +42,7 @@ export default function ServiceHeader() {
             }}
             className="btn btn-active btn-secondary text-base sm:text-lg md:text-xl font-poppins font-semibold px-4 py-3 sm:px-6 sm:py-4"
           >
-            Scopri i Servizi
+            {t('serviceHeader.button')}
           </button>
         </div>
         

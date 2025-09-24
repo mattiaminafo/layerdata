@@ -1,9 +1,12 @@
 "use client";
+import { useTranslations } from "../lib/useTranslations";
 
 export default function Clients() {
+  const { t } = useTranslations();
+  
   return (
     <section className="w-full flex flex-col items-center">
-      <h2 className="text-center text-base md:text-lg mb-12 font-poppins font-medium">Alcune collaborazioni con...</h2>
+      <h2 className="text-center text-base md:text-lg mb-12 font-poppins font-medium">{t('clients.title')}</h2>
       
       {/* Scrolling logos container */}
       <div className="w-full overflow-hidden">

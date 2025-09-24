@@ -1,26 +1,15 @@
+"use client";
+import { useTranslations } from "../lib/useTranslations";
+
 export default function AboutUs() {
-  const team = [
-    {
-      name: "Mattia Minafò",
-      role: "Founder & Data Architect",
-      description: "Esperto in data engineering e automazioni. Specializzato nella creazione di infrastrutture tecnicamente solide per e-commerce e SaaS. Appassionato di crescita aziendale guidata dai dati.",
-      skills: ["Data Engineering", "Automazioni", "GA4", "GTM", "Python", "SQL","Conversion Optimization","Data Governance"],
-      linkedin: "https://www.linkedin.com/in/mattiaminafo/",
-    },
-    {
-      name: "Enrico Chiolo",
-      role: "Founder & Analytics Lead",
-      description: "Esperto in strumenti di analytics enterprise, con competenze in raccolta, integrazione e analisi dei dati digitali. Focus su attribuzione, data governance e insight strategici per guidare decisioni di business data-driven.",
-      skills: ["Digital Analytics", "Data Governance", "Attribution Modeling", "Google Tag Manager", "Google Analytics 4", "Data Integration"],
-      linkedin: "https://www.linkedin.com/in/enricochiolo/",
-    },
-  ];
+  const { t } = useTranslations();
+  const team = t('aboutUs.team');
 
   return (
     <section className="py-12 sm:py-16 md:py-20 lg:py-24 flex flex-col items-center">
       <div className="w-full max-w-6xl mx-auto px-4">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 md:mb-16 font-gotham leading-tight">
-        All&apos;inizio ci sembrava superfluo aggiungere un altro punto di vista. Poi abbiamo visto che mancava proprio la struttura tecnica.        </h2>
+        {t('aboutUs.title')}        </h2>
         
         {/* Immagine rettangolare dei founders */}
         <div className="flex flex-col items-center mb-8 sm:mb-12 md:mb-16">
@@ -32,7 +21,7 @@ export default function AboutUs() {
             />
             <div className="text-center mt-4 sm:mt-6">
               <span className="bg-black text-white px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-bold">
-                I Founders
+                {t('aboutUs.foundersLabel')}
               </span>
             </div>
           </div>

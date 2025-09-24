@@ -2,10 +2,12 @@
 import { useEffect, useState } from "react";
 import Button from "./button";
 import Clients from "./clients";
+import { useTranslations } from "../lib/useTranslations";
 
 export default function Hero() {
   const fullText = "LayerData";
   const [displayed, setDisplayed] = useState("");
+  const { t } = useTranslations();
 
   useEffect(() => {
     let i = 0;
@@ -25,7 +27,7 @@ export default function Hero() {
           <span className="animate-blink">|</span>
         </h1>
         <p className="mt-2 sm:mt-4 md:mt-8 text-lg sm:text-xl md:text-2xl text-center max-w-7xl mb-4 sm:mb-6 md:mb-12 font-bold">
-        La nostra missione: elevare le imprese attraverso la Marketing Technology.
+        {t('hero.mission')}
         </p>
         <style jsx>{`
           @keyframes blink {
@@ -37,8 +39,7 @@ export default function Hero() {
           }
         `}</style>
         <p className="text-lg sm:text-xl md:text-2xl text-center max-w-7xl mb-4 sm:mb-6 md:mb-12">
-          Accompagniamo le aziende nel passaggio verso un modello di business più efficiente, competitivo e orientato ai dati. 
-          L&apos;innovazione in vantaggi misurabili: processi ottimizzati, decisioni più rapide, crescita sostenibile.
+          {t('hero.description')}
         </p>
         
         <div className="mb-4 sm:mb-8 md:mb-12 flex flex-col sm:flex-row gap-3 sm:gap-4 items-center">
@@ -51,7 +52,7 @@ export default function Hero() {
             className="btn btn-active btn-secondary text-base sm:text-lg md:text-xl font-poppins font-semibold px-4 py-3 sm:px-6 sm:py-4 w-full sm:w-auto text-center rounded-full flex items-center justify-center leading-none cursor-pointer"
             style={{ lineHeight: '1', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
           >
-            Scopri i nostri servizi
+            {t('hero.discoverServices')}
           </button>
           
           <a 
@@ -61,7 +62,7 @@ export default function Hero() {
             className="btn btn-outline border-black bg-black text-white hover:bg-black hover:text-white text-base sm:text-lg md:text-xl font-poppins font-semibold px-4 py-3 sm:px-6 sm:py-4 w-full sm:w-auto text-center rounded-full flex items-center justify-center leading-none"
             style={{ lineHeight: '1', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
           >
-            Scopri la community
+            {t('hero.discoverCommunity')}
           </a>
         </div>
         

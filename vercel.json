@@ -1,0 +1,43 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/en"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/servizi",
+      "destination": "/it/servizi",
+      "permanent": true
+    },
+    {
+      "source": "/trainings",
+      "destination": "/it/trainings", 
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "origin-when-cross-origin"
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,10 @@
+"use client";
 import Button from "./button";
+import { useTranslations } from "../lib/useTranslations";
 
 export default function OurCommunity() {
+  const { t } = useTranslations();
+  
   return (
     <section className="w-full py-16 sm:py-24 md:py-32 lg:py-[100px] relative overflow-hidden">
       {/* SVG Background */}
@@ -16,7 +20,7 @@ export default function OurCommunity() {
       <div className="relative z-10 max-w-4xl mx-auto px-4">
         <div className="bg-white rounded-2xl p-6 sm:p-8 md:p-12 shadow-xl text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black-900 mb-4 sm:mb-6 font-gotham leading-tight">
-            Non siamo solo consulenti ma anche divulgatori, unisciti e contribuisci alla Community!
+            {t('ourCommunity.title')}
           </h2>
           
           {/* Profile Pictures Row */}
@@ -41,7 +45,7 @@ export default function OurCommunity() {
               rel="noopener noreferrer"
               className="btn btn-active btn-secondary text-xl font-poppins font-semibold rounded-full"
             >
-              Scopri la community
+              {t('hero.discoverCommunity')}
             </a>
           </div>
         </div>

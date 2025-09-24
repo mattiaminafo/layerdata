@@ -1,8 +1,10 @@
 'use client';
 
 import { useState } from 'react';
+import { useTranslations } from '../lib/useTranslations';
 
 export default function ContactForm() {
+  const { t } = useTranslations();
   const [formData, setFormData] = useState({
     nome: '',
     email: '',
@@ -64,10 +66,10 @@ export default function ContactForm() {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4">
-            Contattaci
+            {t('contactForm.title')}
           </h2>
           <p className="text-lg text-black font-normal">
-            Hai un progetto in mente? Raccontaci la tua idea e scopriamo insieme come possiamo aiutarti.
+            {t('contactForm.subtitle')}
           </p>
         </div>
 
@@ -75,7 +77,7 @@ export default function ContactForm() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label htmlFor="nome" className="block text-sm font-bold text-black mb-2">
-                Nome *
+                {t('contactForm.name')}
               </label>
               <input
                 type="text"
@@ -85,13 +87,13 @@ export default function ContactForm() {
                 onChange={handleChange}
                 required
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-colors"
-                placeholder="Il tuo nome"
+                placeholder={t('contactForm.namePlaceholder')}
               />
             </div>
 
             <div>
               <label htmlFor="email" className="block text-sm font-bold text-black mb-2">
-                Email *
+                {t('contactForm.email')}
               </label>
               <input
                 type="email"
@@ -101,13 +103,13 @@ export default function ContactForm() {
                 onChange={handleChange}
                 required
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-colors"
-                placeholder="la.tua@email.com"
+                placeholder={t('contactForm.emailPlaceholder')}
               />
             </div>
 
             <div>
               <label htmlFor="azienda" className="block text-sm font-bold text-black mb-2">
-                Azienda
+                {t('contactForm.company')}
               </label>
               <input
                 type="text"
@@ -116,13 +118,13 @@ export default function ContactForm() {
                 value={formData.azienda}
                 onChange={handleChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-colors"
-                placeholder="Nome della tua azienda"
+                placeholder={t('contactForm.companyPlaceholder')}
               />
             </div>
 
             <div>
               <label htmlFor="ruolo" className="block text-sm font-bold text-black mb-2">
-                Ruolo
+                {t('contactForm.role')}
               </label>
               <input
                 type="text"
@@ -131,14 +133,14 @@ export default function ContactForm() {
                 value={formData.ruolo}
                 onChange={handleChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-colors"
-                placeholder="Il tuo ruolo in azienda"
+                placeholder={t('contactForm.rolePlaceholder')}
               />
             </div>
           </div>
 
           <div>
             <label htmlFor="richiesta" className="block text-sm font-bold text-black mb-2">
-              Descrivi la tua richiesta *
+              {t('contactForm.request')}
             </label>
             <textarea
               id="richiesta"
@@ -148,7 +150,7 @@ export default function ContactForm() {
               required
               rows={6}
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-colors resize-vertical"
-              placeholder="Raccontaci il tuo progetto, le tue esigenze o qualsiasi domanda tu abbia..."
+              placeholder={t('contactForm.requestPlaceholder')}
             />
           </div>
 
@@ -158,21 +160,19 @@ export default function ContactForm() {
               disabled={isSubmitting}
               className="bg-black text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {isSubmitting ? 'Invio in corso...' : 'Invia richiesta'}
+              {isSubmitting ? t('contactForm.submitting') : t('contactForm.submit')}
             </button>
           </div>
 
           {submitStatus === 'success' && (
             <div className="text-center p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
-              <p className="font-bold">Messaggio inviato con successo!</p>
-              <p className="text-sm">Ti risponderemo al più presto.</p>
+              <p className="font-bold">{t('contactForm.success')}</p>
             </div>
           )}
 
           {submitStatus === 'error' && (
             <div className="text-center p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
-              <p className="font-bold">Errore nell&apos;invio del messaggio</p>
-              <p className="text-sm">Riprova più tardi o contattaci direttamente.</p>
+              <p className="font-bold">{t('contactForm.error')}</p>
             </div>
           )}
         </form>

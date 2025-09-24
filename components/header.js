@@ -1,12 +1,13 @@
 "use client";
 import { useEffect, useState } from "react";
 import { InfoModal } from "./modals";
+import { useTranslations } from "../lib/useTranslations";
 
 export default function Header() {
   const [isTrembling, setIsTrembling] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { t, currentLang } = useTranslations();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -21,8 +22,8 @@ export default function Header() {
     <header className="w-full bg-transparent">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
-        <a href="/" className="text-2xl font-bold font-gotham hover:text-gray-700 transition-colors">
-          LayerData
+        <a href={`/${currentLang}`} className="text-2xl font-bold font-gotham hover:text-gray-700 transition-colors">
+          {t('header.logo')}
         </a>
 
         {/* Desktop Navigation buttons */}
@@ -34,29 +35,29 @@ export default function Header() {
             rel="noopener noreferrer"
             className="text-black hover:text-gray-700 font-medium text-sm py-2.5 px-4 transition-colors"
           >
-           Prenota una call
+           {t('header.bookCall')}
           </a>
 
           {/* Menu dropdown - Per le aziende che vogliono crescere */}
           <div className="relative group">
             <button className="text-black hover:text-gray-700 font-medium text-sm py-2.5 px-4 transition-colors flex items-center">
-              Crescita & Servizi
+              {t('header.growthServices')}
               <svg className="w-4 h-4 ml-1 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
             <div className="absolute top-full right-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <a 
-                href="/servizi"
+                href={`/${currentLang}/${currentLang === 'en' ? 'services' : 'servizi'}`}
                 className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-black transition-colors text-sm"
               >
-                Servizi
+                {t('header.services')}
               </a>
               <a 
-                href="/trainings"
+                href={`/${currentLang}/trainings`}
                 className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-black transition-colors border-t border-gray-100 text-sm"
               >
-                Formazione
+                {t('header.training')}
               </a>
             </div>
           </div>
@@ -68,7 +69,7 @@ export default function Header() {
             rel="noopener noreferrer"
             className="text-black hover:text-gray-700 font-medium text-sm py-2.5 px-4 transition-colors"
           >
-            Community & Learn
+            {t('header.communityLearn')}
           </a>
 
           {/* Info button - Non so cosa mi serve */}
@@ -78,7 +79,7 @@ export default function Header() {
             }`}
             onClick={() => setIsModalOpen(true)}
           >
-            Non so cosa mi serve
+            {t('header.dontKnowWhatNeed')}
           </button>
         </div>
 
@@ -104,34 +105,34 @@ export default function Header() {
             className="btn btn-active btn-secondary text-sm font-poppins font-semibold w-full py-2"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            Prenota una call
+            {t('header.bookCall')}
           </a>
 
           {/* Per le aziende che vogliono crescere */}
           <div className="space-y-1">
             <div className="text-xs font-semibold text-gray-600 px-2 py-1">
-              Per le aziende che vogliono crescere
+              {t('header.companiesWantGrow')}
             </div>
             <a 
-              href="/servizi"
+              href={`/${currentLang}/${currentLang === 'en' ? 'services' : 'servizi'}`}
               className="btn btn-outline border-gray-300 text-gray-700 hover:bg-gray-100 hover:text-black text-sm font-poppins font-semibold w-full py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Servizi
+              {t('header.services')}
             </a>
             <a 
-              href="/trainings"
+              href={`/${currentLang}/trainings`}
               className="btn btn-outline border-gray-300 text-gray-700 hover:bg-gray-100 hover:text-black text-sm font-poppins font-semibold w-full py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Formazione
+              {t('header.training')}
             </a>
           </div>
 
           {/* Open Innovation */}
           <div className="space-y-1">
             <div className="text-xs font-semibold text-gray-600 px-2 py-1">
-              Per le aziende che vogliono innovare
+              {t('header.companiesWantInnovate')}
             </div>
             <a 
               href="https://layerdata.substack.com/"
@@ -140,7 +141,7 @@ export default function Header() {
               className="btn btn-outline border-gray-300 text-gray-700 hover:bg-gray-100 hover:text-black text-sm font-poppins font-semibold w-full py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Community & Learn
+              {t('header.communityLearn')}
             </a>
           </div>
 
@@ -154,7 +155,7 @@ export default function Header() {
               setIsMobileMenuOpen(false);
             }}
           >
-            Non so cosa mi serve
+            {t('header.dontKnowWhatNeed')}
           </button>
         </div>
       </div>
@@ -163,16 +164,13 @@ export default function Header() {
       <InfoModal 
   isOpen={isModalOpen}
   onClose={() => setIsModalOpen(false)}
-  title="Community annuale + Consulenza su misura"
-  content={
-    "Abbiamo un servizio Community: con un abbonamento annuale la tua azienda accede a masterclass, sessioni live e aggiornamenti continui su tracking, web analytics, marketing technology, AI e data governance.\n\n" +
-    "Siamo qui per aiutarti a capire come possiamo supportare la tua azienda. Che tu abbia bisogno di tracciamento e-commerce, automazioni di marketing, dashboard personalizzate o formazione del team, il nostro approccio è sempre lo stesso: prima ascoltiamo, poi proponiamo una soluzione su misura per te."
-  }
+  title={t('modal.title')}
+  content={t('modal.content')}
   details={[
-    { label: "👥", value: "Community annuale: masterclass, live e aggiornamenti continui" },
-    { label: "🎯", value: "Audit gratuito del tuo ecosistema digitale" },
-    { label: "📊", value: "Analisi dei dati e identificazione delle opportunità" },
-    { label: "🚀", value: "Proposta personalizzata per la tua azienda" }
+    { label: "👥", value: t('modal.details.community') },
+    { label: "🎯", value: t('modal.details.audit') },
+    { label: "📊", value: t('modal.details.analysis') },
+    { label: "🚀", value: t('modal.details.proposal') }
   ]}
   size="sm"
 />

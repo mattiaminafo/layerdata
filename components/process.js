@@ -1,6 +1,8 @@
 "use client";
+import { useTranslations } from "../lib/useTranslations";
 
 export default function Process() {
+  const { t } = useTranslations();
 const phases = [
   {
     name: "FASE 1",
@@ -96,10 +98,10 @@ const phases = [
         {/* Header */}
         <div className="text-center mb-6 sm:mb-8 md:mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 font-gotham">
-            Un processo semplice, costruito per generare performance
+            {t('process.title')}
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
-            Dalla definizione degli obiettivi alla messa in produzione, ogni fase è progettata per ottimizzare il marketing con dati accurati, infrastrutture scalabili e azioni misurabili.
+            {t('process.subtitle')}
           </p>
         </div>
 

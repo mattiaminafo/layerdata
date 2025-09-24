@@ -1,24 +1,9 @@
-export default function Skills() {
-  const skills = [
-    // First row
-   "Data Scientist",
-"Web Analytics Specialist",
-"Machine Learning Engineer",
-"Data Engineer",
-"AI Engineer",
-"Marketing Technology Specialist",
-"Data Governance Consultant",
-"Business Intelligence Analyst",
+"use client";
+import { useTranslations } from "../lib/useTranslations";
 
-// Second row
-"Database Administrator",
-"Data Visualization Engineer",
-"Generative AI Engineer",
-"Customer Data Platform (CDP) Architect",
-"Marketing Data Analyst",
-"Data Governance Engineer",
-"Cloud Data Solutions Architect"
-  ];
+export default function Skills() {
+  const { t } = useTranslations();
+  const skills = t('skills.skillsList');
 
   const colors = [
     "bg-yellow-400",      // Yellow/Orange
@@ -47,7 +32,7 @@ export default function Skills() {
         {/* Top Button */}
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <button className="bg-black text-white px-4 sm:px-6 md:px-8 py-3 sm:py-4 rounded-lg font-bold text-base sm:text-lg hover:bg-black-800 transition-colors">
-            Le nostre specialità
+            {t('skills.button')}
           </button>
         </div>
 

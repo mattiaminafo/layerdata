@@ -1,13 +1,13 @@
 import { Poppins } from "next/font/google";
 import localFont from "next/font/local";
-import "./globals.css";
+import "../globals.css";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "700"] });
 
 const gotham = localFont({
   src: [
     {
-      path: "../public/fonts/gotham-bold.woff2",
+      path: "../../public/fonts/gotham-bold.woff2",
       weight: "700",
       style: "normal",
     },
@@ -16,14 +16,26 @@ const gotham = localFont({
 });
 
 export const metadata = {
-  title: "LayerData",
-  description: "We create order in your business data",
+  title: "LayerData - Marketing Technology Solutions",
+  description: "We create order in your business data. Advanced marketing technology, data analytics, and automation solutions for growing companies.",
+  keywords: "marketing technology, data analytics, automation, GA4, GTM, business intelligence",
+  openGraph: {
+    title: "LayerData - Marketing Technology Solutions",
+    description: "We create order in your business data. Advanced marketing technology, data analytics, and automation solutions for growing companies.",
+    locale: "en_US",
+    type: "website",
+  },
 };
 
-export default function RootLayout({ children }) {
+export default function EnLayout({ children }) {
   return (
     <html lang="en" data-theme="cyberpunk" className={`${poppins.className} ${gotham.variable}`}>
       <head>
+        {/* Hreflang tags for multilingual SEO */}
+        <link rel="alternate" hrefLang="en" href="https://layerdata.eu/en" />
+        <link rel="alternate" hrefLang="it" href="https://layerdata.eu/it" />
+        <link rel="alternate" hrefLang="x-default" href="https://layerdata.eu/en" />
+        
         {/* Google Tag Manager */}
         <script
           dangerouslySetInnerHTML={{

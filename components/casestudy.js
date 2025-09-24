@@ -1,37 +1,10 @@
 "use client";
 import { useState } from "react";
-
-const caseStudies = [
-  {
-    title: "E-commerce Fashion",
-    short: "Incremento conversioni tramite dashboard e automazioni. Abbiamo implementato una dashboard centralizzata e automazioni di marketing per un e-commerce fashion, portando a un aumento del 30% delle conversioni in 3 mesi.",
-    long: "Abbiamo implementato una dashboard centralizzata e automazioni di marketing per un e-commerce fashion, portando a un aumento del 30% delle conversioni in 3 mesi. Integrazione con GA4, Meta API e automazioni email personalizzate.",
-    client: "Fashion Brand",
-    duration: "3 mesi",
-    results: "+30% conversioni",
-    technologies: ["GA4", "Meta API", "Automazioni"],
-  },
-  {
-    title: "SaaS B2B",
-    short: "Centralizzazione dati e insight per la crescita. Per una SaaS B2B abbiamo centralizzato i dati di vendita e prodotto, generando insight strategici che hanno guidato nuove campagne e ottimizzato il funnel di vendita.",
-    long: "Per una SaaS B2B abbiamo centralizzato i dati di vendita e prodotto, generando insight strategici che hanno guidato nuove campagne e ottimizzato il funnel di vendita.",
-    client: "SaaS Company",
-    duration: "6 mesi",
-    results: "Nuove campagne + ottimizzazione funnel",
-    technologies: ["Data Warehouse", "Dashboard", "Automazioni"],
-  },
-  {
-    title: "Marketplace Food",
-    short: "Tracking avanzato e segmentazione utenti. Implementazione di tracking avanzato e segmentazione comportamentale per un marketplace food, migliorando la retention e la personalizzazione delle offerte.",
-    long: "Implementazione di tracking avanzato e segmentazione comportamentale per un marketplace food, migliorando la retention e la personalizzazione delle offerte.",
-    client: "Marketplace Food",
-    duration: "4 mesi",
-    results: "+20% retention",
-    technologies: ["GA4", "Segmentazione", "Personalizzazione"],
-  },
-];
+import { useTranslations } from "../lib/useTranslations";
 
 export default function CaseStudy() {
+  const { t } = useTranslations();
+  const caseStudies = t('caseStudy.studies');
   const [open, setOpen] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -49,7 +22,7 @@ export default function CaseStudy() {
 
   return (
     <section className="py-12 sm:py-16 md:py-20 lg:py-24 flex flex-col items-center">
-      <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 md:mb-16 font-gotham">Case Studies</h2>
+      <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 md:mb-16 font-gotham">{t('caseStudy.title')}</h2>
       
       {/* Desktop Carousel */}
       <div className="hidden md:block relative w-full max-w-7xl mx-auto px-4">
@@ -83,7 +56,7 @@ export default function CaseStudy() {
               className="px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold bg-black text-white hover:bg-gray-900 transition-colors w-full text-base sm:text-lg"
               onClick={() => setOpen(currentIndex)}
             >
-              Scopri di più
+              {t('caseStudy.discoverMore')}
             </button>
           </div>
 
@@ -119,7 +92,7 @@ export default function CaseStudy() {
                 className="px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold bg-black text-white hover:bg-gray-900 transition-colors w-full text-sm sm:text-base"
                 onClick={() => setOpen(index)}
               >
-                Scopri di più
+                {t('caseStudy.discoverMore')}
               </button>
             </div>
           ))}

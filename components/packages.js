@@ -2,74 +2,24 @@
 import { useState } from "react";
 import Button from "./button";
 import { InfoModal } from "./modals";
-
-const packages = [
-  {
-    name: "Pacchetto Light",
-    price: "1500",
-    period: "euro/mese",
-    features: [
-      "Tracking avanzato GA4, GTM server-side, Meta API",
-      "Dashboard centralizzate su KPI e vendite reali",
-    ],
-    extra: [],
-    detailedDescription: "Il Pacchetto Light è perfetto per aziende che vogliono iniziare a tracciare correttamente i propri dati digitali. Implementiamo un sistema di tracking completo che ti permette di vedere esattamente cosa succede nel tuo ecosistema digitale.",
-    details: [
-      { label: "Durata", value: "3 mesi" },
-      { label: "Focus", value: "Tracking e Dashboard" },
-      { label: "Risultato", value: "Visibilità completa sui dati" },
-      { label: "Ideale per", value: "Aziende che iniziano il percorso data-driven" }
-    ]
-  },
-  {
-    name: "Pacchetto Medium",
-    price: "2500",
-    period: "euro/mese",
-    features: [
-      "Tutto di Light",
-      "Centralizzazione dei dati in un unico posto",
-      "Automazioni",
-      "Insights generation",
-    ],
-    extra: [],
-    detailedDescription: "Il Pacchetto Medium aggiunge automazioni e centralizzazione dei dati. Non solo vedi i dati, ma li usi per automatizzare processi e generare insight strategici che guidano le tue decisioni.",
-    details: [
-      { label: "Durata", value: "4 mesi" },
-      { label: "Focus", value: "Automazioni e Centralizzazione" },
-      { label: "Risultato", value: "Processi automatizzati e insight strategici" },
-      { label: "Ideale per", value: "Aziende che vogliono scalare con i dati" }
-    ]
-  },
-  {
-    name: "Pacchetto Heavy",
-    price: "4000",
-    period: "euro/mese",
-    features: [
-      "Tutto di Medium",
-      "Creazione Customer Data Platform con ETL e Reverse ETL",
-      "Segmentazione comportamentale",
-    ],
-    extra: [],
-    detailedDescription: "Il Pacchetto Heavy è la soluzione completa per aziende che vogliono diventare leader nel proprio settore. Creiamo una Customer Data Platform personalizzata che ti permette di conoscere ogni singolo cliente e personalizzare ogni interazione.",
-    details: [
-      { label: "Durata", value: "5 mesi" },
-      { label: "Focus", value: "Customer Data Platform e Personalizzazione" },
-      { label: "Risultato", value: "Conoscenza completa del cliente e personalizzazione avanzata" },
-      { label: "Ideale per", value: "Aziende che vogliono dominare il mercato" }
-    ]
-  },
-];
+import { useTranslations } from "../lib/useTranslations";
 
 export default function Packages() {
+  const { t } = useTranslations();
+  const packages = [
+    t('packages.light'),
+    t('packages.medium'),
+    t('packages.heavy')
+  ];
   const [openModal, setOpenModal] = useState(null);
 
   return (
     <section className="w-full py-10 bg-transparent">
       <div className="max-w-6xl mx-auto px-4 text-center">
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 sm:mb-8 md:mb-10 text-center leading-tight">
-          Dai 3 ai 5 mesi Creiamo La Tua Macchina per la Crescita
+          {t('packages.title')}
         </h2>
-        <h3 className="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-12 md:mb-16 text-center">Scegli il tuo pacchetto</h3>
+        <h3 className="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-12 md:mb-16 text-center">{t('packages.subtitle')}</h3>
 
         <div className="w-full flex flex-col md:flex-row justify-center items-center md:items-stretch gap-6 sm:gap-8 md:gap-12">
           {packages.map((pkg, idx) => (
@@ -89,18 +39,18 @@ export default function Packages() {
                   rel="noopener noreferrer"
                   className="btn btn-active btn-secondary text-xl font-poppins font-semibold"
                 >
-                  Prenota call
+                  {t('packages.bookCall')}
                 </a>
                 <button 
                   onClick={() => setOpenModal(idx)}
                   className="btn btn-outline border-black text-black hover:bg-black hover:text-white text-base font-poppins font-semibold"
                 >
-                  Scopri di più
+                  {t('packages.discoverMore')}
                 </button>
               </div>
 
               <div className="mt-8 w-full">
-                <div className="text-base font-semibold mb-4">Comprende:</div>
+                <div className="text-base font-semibold mb-4">{t('packages.includes')}</div>
                 <ul className="space-y-3">
                   {pkg.features.map((f, i) => (
                     <li key={i} className="flex items-start gap-3">
@@ -121,7 +71,7 @@ export default function Packages() {
           isOpen={openModal !== null}
           onClose={() => setOpenModal(null)}
           title={packages[openModal].name}
-          content={packages[openModal].detailedDescription}
+          content={packages[openModal].description}
           details={packages[openModal].details}
           size="sm"
         />

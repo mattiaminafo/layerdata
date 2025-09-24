@@ -1,59 +1,16 @@
 "use client";
 import { useState } from "react";
 import Button from "./button";
-
-const tripwires = [
-  {
-    title: "Shopify Tracking",
-    price: "€3000",
-    period: "one shot",
-    description: " Creiamo il tracciamento Shopify che funziona!",
-    category: "Ecommerce Tracking"
-  },
-  {
-    title: "Tracking Jumpstart",
-    price: "€2000",
-    period: "one shot",
-    description: "Audit + tracciamento base GA4/Meta API + dashboard base",
-    category: "Ecommerce Tracking"
-  },
-  {
-    title: "CDP Pack",
-    price: "€1500",
-    period: "/mese",
-    description: "Customer Data Platform completa",
-    category: "Database"
-  },
-  {
-    title: "Insight Pack",
-    price: "€750",
-    period: "/mese",
-    description: "Report strategico e dashboard avanzata",
-    category: "Ecommerce Tracking"
-  },
-  {
-    title: "Training Pack",
-    price: "€900",
-    period: "/mese",
-    description: "Formazione team + manuali operativi",
-    category: "Formazione"
-  },
-  {
-    title: "Automation Pack",
-    price: "€900",
-    period: "/mese",
-    description: "Journey multicanale avanzato",
-    category: "Automazioni"
-  },
-];
-
-const categories = ["Tutti", "Ecommerce Tracking", "Automazioni", "Database", "Formazione"];
+import { useTranslations } from "../lib/useTranslations";
 
 export default function Tripwires() {
+  const { t } = useTranslations();
+  const tripwires = t('tripwires.services');
+  const categories = t('tripwires.categories');
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [selectedCategory, setSelectedCategory] = useState("Tutti");
+  const [selectedCategory, setSelectedCategory] = useState(categories[0]);
 
-  const filteredTripwires = selectedCategory === "Tutti" 
+  const filteredTripwires = selectedCategory === categories[0] 
     ? tripwires 
     : tripwires.filter(tripwire => tripwire.category === selectedCategory);
 
@@ -76,7 +33,7 @@ export default function Tripwires() {
 
   return (
     <section className="w-full py-24 flex flex-col items-center bg-transparent">
-      <h2 className="text-5xl font-bold text-center mb-16 font-gotham">Il pacchetto non è ciò che fa per te? Ecco una serie di servizi singoli:</h2>
+      <h2 className="text-5xl font-bold text-center mb-16 font-gotham">{t('tripwires.title')}</h2>
       
       {/* Filtri */}
       <div className="w-full max-w-4xl mx-auto px-4 mb-12">
