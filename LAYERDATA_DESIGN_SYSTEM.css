@@ -1,0 +1,531 @@
+/* LayerData Design System - CSS Variables & Classes */
+/* Use this file as a reference for implementing the LayerData design system */
+
+:root {
+  /* Primary Colors */
+  --primary-purple: #8B5CF6;
+  --purple-dark: #7C3AED;
+  --purple-light: #A78BFA;
+  
+  --primary-beige: #F59E0B;
+  --beige-dark: #D97706;
+  --beige-light: #FBBF24;
+  
+  --primary-gray: #6B7280;
+  --gray-dark: #374151;
+  --gray-light: #9CA3AF;
+  
+  /* Neutral Colors */
+  --white: #FFFFFF;
+  --black: #111827;
+  --gray-50: #F9FAFB;
+  --gray-100: #F3F4F6;
+  --gray-200: #E5E7EB;
+  --gray-600: #4B5563;
+  --gray-900: #111827;
+  
+  /* Typography */
+  --font-mulish: 'Mulish', sans-serif;
+  --font-gotham: 'Gotham', sans-serif;
+  
+  /* Spacing */
+  --spacing-xs: 0.25rem;   /* 4px */
+  --spacing-sm: 0.5rem;    /* 8px */
+  --spacing-md: 1rem;      /* 16px */
+  --spacing-lg: 1.5rem;    /* 24px */
+  --spacing-xl: 2rem;      /* 32px */
+  --spacing-2xl: 3rem;     /* 48px */
+  --spacing-3xl: 4rem;     /* 64px */
+  
+  /* Breakpoints */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-mulish);
+  background-color: var(--white);
+  color: var(--black);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* Typography Classes */
+.heading-primary {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  font-family: var(--font-gotham);
+  color: var(--gray-900);
+}
+
+.heading-secondary {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  font-family: var(--font-gotham);
+  color: var(--gray-900);
+}
+
+.text-large {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.6;
+  font-family: var(--font-mulish);
+  color: var(--gray-600);
+}
+
+/* Responsive Typography */
+@media (min-width: 640px) {
+  .heading-primary {
+    font-size: 2.5rem;
+  }
+  
+  .heading-secondary {
+    font-size: 2rem;
+  }
+  
+  .text-large {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .heading-primary {
+    font-size: 3rem;
+  }
+  
+  .heading-secondary {
+    font-size: 2.5rem;
+  }
+  
+  .text-large {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heading-primary {
+    font-size: 4rem;
+  }
+  
+  .heading-secondary {
+    font-size: 3rem;
+  }
+  
+  .text-large {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .heading-primary {
+    font-size: 5rem;
+  }
+  
+  .heading-secondary {
+    font-size: 4rem;
+  }
+  
+  .text-large {
+    font-size: 1.5rem;
+  }
+}
+
+/* Button Classes */
+.btn-primary {
+  background-color: var(--primary-purple);
+  color: var(--white);
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  font-family: var(--font-mulish);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background-color: var(--purple-dark);
+}
+
+.btn-secondary {
+  background-color: var(--primary-beige);
+  color: var(--white);
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  font-family: var(--font-mulish);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-secondary:hover {
+  background-color: var(--beige-dark);
+}
+
+.btn-outline {
+  border: 2px solid var(--primary-gray);
+  color: var(--primary-gray);
+  background-color: transparent;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  font-family: var(--font-mulish);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-gray);
+  color: var(--white);
+}
+
+/* Responsive Button Sizes */
+@media (min-width: 640px) {
+  .btn-primary,
+  .btn-secondary,
+  .btn-outline {
+    padding: 0.625rem 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .btn-primary,
+  .btn-secondary,
+  .btn-outline {
+    padding: 0.75rem 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .btn-primary,
+  .btn-secondary,
+  .btn-outline {
+    padding: 0.875rem 2rem;
+  }
+}
+
+/* Card Classes */
+.card {
+  background-color: var(--white);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--gray-200);
+  padding: 1.5rem;
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Container Classes */
+.container-max {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .container-max {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-max {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-max {
+    padding: 0 2rem;
+  }
+}
+
+/* Section Classes */
+.section-padding {
+  padding: 1rem 0;
+}
+
+@media (min-width: 640px) {
+  .section-padding {
+    padding: 1.5rem 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding: 2rem 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding: 3rem 0;
+  }
+}
+
+/* Gradient Classes */
+.gradient-bg {
+  background: linear-gradient(135deg, var(--primary-beige) 0%, var(--primary-purple) 100%);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary-beige) 0%, var(--primary-purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: 0.25rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 0.75rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.mb-8 { margin-bottom: 2rem; }
+.mb-10 { margin-bottom: 2.5rem; }
+.mb-12 { margin-bottom: 3rem; }
+
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: 0.25rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-3 { margin-top: 0.75rem; }
+.mt-4 { margin-top: 1rem; }
+.mt-6 { margin-top: 1.5rem; }
+.mt-8 { margin-top: 2rem; }
+.mt-10 { margin-top: 2.5rem; }
+.mt-12 { margin-top: 3rem; }
+
+/* Grid Classes */
+.grid {
+  display: grid;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+.gap-12 {
+  gap: 3rem;
+}
+
+/* Responsive Grid */
+@media (min-width: 640px) {
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Flexbox Classes */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+/* Responsive Flex */
+@media (min-width: 640px) {
+  .sm\:flex-row {
+    flex-direction: row;
+  }
+}
+
+/* Width Classes */
+.w-full {
+  width: 100%;
+}
+
+.max-w-4xl {
+  max-width: 56rem;
+}
+
+.max-w-7xl {
+  max-width: 80rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Background Classes */
+.bg-white {
+  background-color: var(--white);
+}
+
+.bg-gray-50 {
+  background-color: var(--gray-50);
+}
+
+.bg-gray-100 {
+  background-color: var(--gray-100);
+}
+
+/* Border Classes */
+.border {
+  border-width: 1px;
+}
+
+.border-t {
+  border-top-width: 1px;
+}
+
+.border-gray-200 {
+  border-color: var(--gray-200);
+}
+
+/* Overflow Classes */
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+/* Animation Classes */
+.transition-colors {
+  transition-property: color, background-color, border-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-shadow {
+  transition-property: box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Hover Effects */
+.hover\:bg-purple-dark:hover {
+  background-color: var(--purple-dark);
+}
+
+.hover\:bg-beige-dark:hover {
+  background-color: var(--beige-dark);
+}
+
+.hover\:bg-gray:hover {
+  background-color: var(--primary-gray);
+}
+
+.hover\:text-white:hover {
+  color: var(--white);
+}
+
+.hover\:shadow-xl:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Focus States */
+.focus\:outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.focus\:ring-2:focus {
+  box-shadow: 0 0 0 2px var(--primary-purple);
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-only {
+    display: block !important;
+  }
+}
+
+/* Dark Mode Support (Future) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --white: #111827;
+    --black: #FFFFFF;
+    --gray-50: #1F2937;
+    --gray-100: #374151;
+    --gray-200: #4B5563;
+    --gray-600: #D1D5DB;
+    --gray-900: #F9FAFB;
+  }
+}

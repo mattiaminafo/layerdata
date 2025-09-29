@@ -1,0 +1,292 @@
+{
+  "brand": {
+    "name": "LayerData",
+    "tagline": "Understand & influence customer behavior",
+    "description": "An integrated model that combines analytics, segmentation and personalization to increase your audience value and optimize results.",
+    "domain": "layerdata.eu",
+    "email": "info@layerdata.eu"
+  },
+  "colors": {
+    "primary": {
+      "purple": "#8B5CF6",
+      "purple-dark": "#7C3AED",
+      "purple-light": "#A78BFA",
+      "beige": "#F59E0B",
+      "beige-dark": "#D97706",
+      "beige-light": "#FBBF24",
+      "gray": "#6B7280",
+      "gray-dark": "#374151",
+      "gray-light": "#9CA3AF"
+    },
+    "neutral": {
+      "white": "#FFFFFF",
+      "black": "#111827",
+      "gray-50": "#F9FAFB",
+      "gray-100": "#F3F4F6",
+      "gray-200": "#E5E7EB",
+      "gray-600": "#4B5563",
+      "gray-900": "#111827"
+    }
+  },
+  "typography": {
+    "fonts": {
+      "primary": "Mulish",
+      "secondary": "Gotham",
+      "fallback": "system-ui, -apple-system, sans-serif"
+    },
+    "weights": {
+      "normal": 400,
+      "semibold": 600,
+      "bold": 700
+    },
+    "sizes": {
+      "xs": "0.75rem",
+      "sm": "0.875rem",
+      "base": "1rem",
+      "lg": "1.125rem",
+      "xl": "1.25rem",
+      "2xl": "1.5rem",
+      "3xl": "1.875rem",
+      "4xl": "2.25rem",
+      "5xl": "3rem",
+      "6xl": "3.75rem"
+    }
+  },
+  "spacing": {
+    "xs": "0.25rem",
+    "sm": "0.5rem",
+    "md": "1rem",
+    "lg": "1.5rem",
+    "xl": "2rem",
+    "2xl": "3rem",
+    "3xl": "4rem",
+    "4xl": "6rem",
+    "5xl": "8rem"
+  },
+  "breakpoints": {
+    "sm": "640px",
+    "md": "768px",
+    "lg": "1024px",
+    "xl": "1280px",
+    "2xl": "1536px"
+  },
+  "components": {
+    "buttons": {
+      "primary": {
+        "background": "var(--primary-purple)",
+        "color": "var(--white)",
+        "hover": "var(--purple-dark)",
+        "padding": "0.5rem 1.5rem",
+        "font-weight": 600
+      },
+      "secondary": {
+        "background": "var(--primary-beige)",
+        "color": "var(--white)",
+        "hover": "var(--beige-dark)",
+        "padding": "0.5rem 1.5rem",
+        "font-weight": 600
+      },
+      "outline": {
+        "border": "2px solid var(--primary-gray)",
+        "color": "var(--primary-gray)",
+        "background": "transparent",
+        "hover-background": "var(--primary-gray)",
+        "hover-color": "var(--white)",
+        "padding": "0.5rem 1.5rem",
+        "font-weight": 600
+      }
+    },
+    "cards": {
+      "background": "var(--white)",
+      "shadow": "0 10px 15px -3px rgba(0, 0, 0, 0.1)",
+      "border": "1px solid var(--gray-200)",
+      "padding": "1.5rem",
+      "hover-shadow": "0 25px 50px -12px rgba(0, 0, 0, 0.25)"
+    },
+    "containers": {
+      "max-width": "80rem",
+      "padding": {
+        "mobile": "0.75rem",
+        "tablet": "1rem",
+        "desktop": "1.5rem",
+        "large": "2rem"
+      }
+    }
+  },
+  "gradients": {
+    "primary": "linear-gradient(135deg, var(--primary-beige) 0%, var(--primary-purple) 100%)",
+    "text": "linear-gradient(135deg, var(--primary-beige) 0%, var(--primary-purple) 100%)"
+  },
+  "animations": {
+    "duration": {
+      "fast": "150ms",
+      "normal": "200ms",
+      "slow": "300ms"
+    },
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  "layout": {
+    "max-width": "80rem",
+    "section-padding": {
+      "mobile": "1rem",
+      "tablet": "1.5rem",
+      "desktop": "2rem",
+      "large": "3rem"
+    }
+  },
+  "seo": {
+    "title": "LayerData - Understand & influence customer behavior",
+    "description": "An integrated model that combines analytics, segmentation and personalization to increase your audience value and optimize results.",
+    "keywords": ["analytics", "segmentation", "personalization", "customer behavior", "data", "marketing"],
+    "og-image": "/images/og-image.jpg",
+    "twitter-card": "summary_large_image"
+  },
+  "social": {
+    "substack": "https://layerdata.substack.com/",
+    "linkedin": "https://linkedin.com/company/layerdata",
+    "twitter": "https://twitter.com/layerdata"
+  },
+  "contact": {
+    "email": "info@layerdata.eu",
+    "phone": "+39 123 456 7890",
+    "address": "Milano, Italy"
+  },
+  "languages": {
+    "default": "en",
+    "supported": ["en", "it"],
+    "fallback": "en"
+  },
+  "routes": {
+    "en": {
+      "home": "/en",
+      "services": "/en/services",
+      "trainings": "/en/trainings"
+    },
+    "it": {
+      "home": "/it",
+      "services": "/it/servizi",
+      "trainings": "/it/trainings"
+    }
+  },
+  "navigation": {
+    "main": [
+      {
+        "key": "services",
+        "en": "Services",
+        "it": "Servizi",
+        "href": {
+          "en": "/en/services",
+          "it": "/it/servizi"
+        }
+      },
+      {
+        "key": "community",
+        "en": "Community",
+        "it": "Community",
+        "href": "https://layerdata.substack.com/",
+        "external": true
+      },
+      {
+        "key": "eventsForCompanies",
+        "en": "Events for companies",
+        "it": "Eventi per aziende",
+        "modal": true
+      }
+    ]
+  },
+  "content": {
+    "hero": {
+      "en": {
+        "mission": "Understand & influence customer behavior",
+        "description": "An integrated model that combines analytics, segmentation and personalization to increase your audience value and optimize results.",
+        "discoverServices": "Start the journey →",
+        "discoverCommunity": "Discover the community"
+      },
+      "it": {
+        "mission": "Comprendi e influenza il comportamento dei clienti",
+        "description": "Un modello integrato che combina analytics, segmentazione e personalizzazione per aumentare il valore del tuo pubblico e ottimizzare i risultati.",
+        "discoverServices": "Inizia il percorso →",
+        "discoverCommunity": "Scopri la community"
+      }
+    },
+    "services": {
+      "en": {
+        "title": "Our Services",
+        "subtitle": "Complete solutions for your data-driven growth",
+        "sections": [
+          {
+            "title": "Implementation",
+            "description": "We implement your data infrastructure from scratch, ensuring scalability and performance."
+          },
+          {
+            "title": "Technical Advisory",
+            "description": "Expert guidance on data architecture, technology selection, and best practices."
+          },
+          {
+            "title": "Audience & Revenue Services",
+            "description": "Maximize your audience value through advanced analytics and revenue optimization."
+          },
+          {
+            "title": "Campaign Optimization",
+            "description": "Data-driven campaign strategies that deliver measurable results."
+          },
+          {
+            "title": "Training & Enablement",
+            "description": "Empower your team with the knowledge and tools they need to succeed."
+          }
+        ]
+      },
+      "it": {
+        "title": "I Nostri Servizi",
+        "subtitle": "Soluzioni complete per la tua crescita data-driven",
+        "sections": [
+          {
+            "title": "Implementazione",
+            "description": "Implementiamo la tua infrastruttura dati da zero, garantendo scalabilità e performance."
+          },
+          {
+            "title": "Consulenza Tecnica",
+            "description": "Guidance esperta su architettura dati, selezione tecnologie e best practices."
+          },
+          {
+            "title": "Servizi Audience & Revenue",
+            "description": "Massimizza il valore del tuo pubblico attraverso analytics avanzate e ottimizzazione revenue."
+          },
+          {
+            "title": "Ottimizzazione Campaign",
+            "description": "Strategie di campaign data-driven che producono risultati misurabili."
+          },
+          {
+            "title": "Training & Enablement",
+            "description": "Potenzia il tuo team con le conoscenze e gli strumenti necessari per il successo."
+          }
+        ]
+      }
+    }
+  },
+  "performance": {
+    "targets": {
+      "lcp": "< 2.5s",
+      "fid": "< 100ms",
+      "cls": "< 0.1",
+      "fcp": "< 1.8s"
+    },
+    "optimizations": [
+      "Image optimization with Next.js Image component",
+      "Font loading optimization",
+      "CSS purging with Tailwind",
+      "Code splitting",
+      "Lazy loading"
+    ]
+  },
+  "accessibility": {
+    "standards": "WCAG 2.1 AA",
+    "requirements": [
+      "Keyboard navigation",
+      "Screen reader compatibility",
+      "Color contrast compliance",
+      "Focus indicators",
+      "Alt text for images"
+    ]
+  }
+}
