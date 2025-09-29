@@ -6,73 +6,78 @@ import { useTranslations } from "../lib/useTranslations";
 
 export default function Packages() {
   const { t } = useTranslations();
-  const packages = [
-    t('packages.light'),
-    t('packages.medium'),
-    t('packages.heavy')
-  ];
-  const [openModal, setOpenModal] = useState(null);
+  const packageData = t('packages.singlePackage');
+  const [openModal, setOpenModal] = useState(false);
 
   return (
-    <section className="w-full py-10 bg-transparent">
-      <div className="max-w-6xl mx-auto px-4 text-center">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 sm:mb-8 md:mb-10 text-center leading-tight">
-          {t('packages.title')}
-        </h2>
-        <h3 className="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-12 md:mb-16 text-center">{t('packages.subtitle')}</h3>
+    <section className="section-padding bg-gray-50">
+      <div className="container-max">
+        <div className="text-center mb-12 sm:mb-14 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 leading-tight font-gotham mb-4 sm:mb-6">
+            {t('packages.title')}
+          </h2>
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed font-mulish">
+            {t('packages.subtitle')}
+          </p>
+        </div>
 
-        <div className="w-full flex flex-col md:flex-row justify-center items-center md:items-stretch gap-6 sm:gap-8 md:gap-12">
-          {packages.map((pkg, idx) => (
-            <div
-              key={pkg.name}
-              className="bg-base-100 rounded-2xl shadow-xl flex flex-col items-center p-6 sm:p-8 md:p-10 w-full md:flex-1 md:min-w-[280px] max-w-md border border-base-200"
-            >
-              <div className="text-xl font-semibold mb-4 font-poppins px-6 py-3 rounded-lg text-black" style={{backgroundColor: '#41cadf'}}>{pkg.name}</div>
-              <div className="text-4xl font-bold font-gotham mb-2">€{pkg.price}</div>
-              <div className="text-base mb-6 text-gray-500">{pkg.period}</div>
-              
-              {/* Buttons */}
-              <div className="flex flex-col gap-3 w-full mb-8">
-                <a 
-                  href="https://calendar.notion.so/meet/mattiaminaf/of3pa4oup"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-active btn-secondary text-xl font-poppins font-semibold"
-                >
-                  {t('packages.bookCall')}
-                </a>
-                <button 
-                  onClick={() => setOpenModal(idx)}
-                  className="btn btn-outline border-black text-black hover:bg-black hover:text-white text-base font-poppins font-semibold"
-                >
-                  {t('packages.discoverMore')}
-                </button>
-              </div>
-
-              <div className="mt-8 w-full">
-                <div className="text-base font-semibold mb-4">{t('packages.includes')}</div>
-                <ul className="space-y-3">
-                  {pkg.features.map((f, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <span className="text-lg text-secondary font-bold">+</span>
-                      <span>{f}</span>
-                    </li>
-                  ))}
-                </ul>
+        {/* Single Package Card - Piano.io Style Mobile First */}
+        <div className="max-w-4xl mx-auto">
+          <div className="card text-center">
+            {/* Package Header */}
+            <div className="mb-6 sm:mb-8">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3 sm:mb-4 font-gotham">
+                {packageData.name}
+              </h3>
+              <div className="flex items-center justify-center gap-2 mb-3 sm:mb-4">
+                <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-[var(--primary-purple)] font-gotham">
+                  €{packageData.price}
+                </span>
+                <span className="text-sm sm:text-base md:text-lg text-gray-600">
+                  {packageData.period}
+                </span>
               </div>
             </div>
-          ))}
+
+            {/* Features Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-8 sm:mb-10 md:mb-12">
+              {packageData.features.map((feature, index) => (
+                <div key={index} className="flex items-start gap-3 text-left">
+                  <div className="w-2 h-2 bg-[var(--primary-purple)] mt-2 flex-shrink-0"></div>
+                  <span className="text-sm sm:text-base text-gray-700">{feature}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+              <a 
+                href="https://calendar.notion.so/meet/mattiaminaf/of3pa4oup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4"
+              >
+                {t('packages.bookCall')}
+              </a>
+              <button 
+                onClick={() => setOpenModal(true)}
+                className="btn-outline text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4"
+              >
+                {t('packages.discoverMore')}
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Modals for each package */}
-      {openModal !== null && (
+      {/* Modal */}
+      {openModal && (
         <InfoModal 
-          isOpen={openModal !== null}
-          onClose={() => setOpenModal(null)}
-          title={packages[openModal].name}
-          content={packages[openModal].description}
-          details={packages[openModal].details}
+          isOpen={openModal}
+          onClose={() => setOpenModal(false)}
+          title={packageData.name}
+          content={packageData.description}
+          details={packageData.details}
           size="sm"
         />
       )}

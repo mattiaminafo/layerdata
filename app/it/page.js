@@ -10,24 +10,24 @@ import ContactForm from "../../components/contactForm";
 
 export default function ItPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen w-full overflow-x-hidden">
       <Header />
       <Hero />
       <OurImpact />
       
-      <div className="py-8 sm:py-16 md:py-24">
+      <div className="py-2 sm:py-4 md:py-6 lg:py-8 xl:py-12">
         <OurExpertise />
       </div>
 
-      <div className="py-8 sm:py-16 md:py-24">
+      <div className="py-2 sm:py-4 md:py-6 lg:py-8 xl:py-12">
         <OurCommunity />
       </div>
 
-      <div className="py-8 sm:py-16 md:py-24">
+      <div className="py-2 sm:py-4 md:py-6 lg:py-8 xl:py-12">
         <Skills />
       </div>
 
-      <div className="py-8 sm:py-16 md:py-24">
+      <div className="py-2 sm:py-4 md:py-6 lg:py-8 xl:py-12">
         <AboutUs />
       </div>
       

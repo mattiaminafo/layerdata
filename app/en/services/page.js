@@ -1,12 +1,13 @@
 import Header from "../../../components/header";
 import AboutUs from "../../../components/aboutus";
 import Packages from "../../../components/packages";
-import Tripwires from "../../../components/tripwires";
 import CaseStudy from "../../../components/casestudy";
 import Footer from "../../../components/footer";
 import ServiceHeader from "../../../components/serviceHeader";
 import Clients from "../../../components/clients";
 import Process from "../../../components/process";
+import ServicesSections from "../../../components/servicesSections";
+import ServicesFinalCta from "../../../components/servicesFinalCta";
 
 export default function EnServicesPage() {
   return (
@@ -17,6 +18,11 @@ export default function EnServicesPage() {
       <ServiceHeader /> 
       <Clients />
     
+      {/* Nuove sezioni servizi */}
+      <ServicesSections />
+      
+      {/* CTA finale */}
+      <ServicesFinalCta />
 
       <div className="py-8 sm:py-16 md:py-32">
         <Process />
@@ -24,10 +30,6 @@ export default function EnServicesPage() {
 
       <div className="py-8 sm:py-16 md:py-32" id="packages-section">
         <Packages />
-      </div>
-      
-      <div className="py-8 sm:py-16 md:py-24">
-        <Tripwires />
       </div>
       
       <div className="py-8 sm:py-16 md:py-32">

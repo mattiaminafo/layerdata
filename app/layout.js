@@ -1,9 +1,15 @@
-import { Poppins } from "next/font/google";
+import { Mulish } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "700"] });
+// Usando Mulish da Google Fonts
+const mulish = Mulish({ 
+  subsets: ["latin"], 
+  weight: ["200", "300", "400", "500", "600", "700", "800", "900", "1000"],
+  variable: "--font-mulish"
+});
 
+// Manteniamo Gotham per i titoli
 const gotham = localFont({
   src: [
     {
@@ -27,7 +33,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" data-theme="cyberpunk" className={`${poppins.className} ${gotham.variable}`}>
+    <html lang="en" data-theme="cyberpunk" className={`${mulish.variable} ${gotham.variable}`}>
       <head>
         {/* Google Tag Manager */}
         <script

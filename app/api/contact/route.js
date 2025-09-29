@@ -1,10 +1,11 @@
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Initialize Resend only if API key is present
+const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 
 // Debug: check if API key is present
 if (!process.env.RESEND_API_KEY) {
-  console.error('RESEND_API_KEY is not set in environment variables');
+  console.warn('RESEND_API_KEY is not set in environment variables - contact form will not work');
 }
 
 export async function POST(request) {
@@ -24,6 +25,15 @@ export async function POST(request) {
       return Response.json(
         { error: 'Nome, email e richiesta sono obbligatori' },
         { status: 400 }
+      );
+    }
+
+    // Check if Resend is available
+    if (!resend) {
+      console.error('Resend is not initialized - missing API key');
+      return Response.json(
+        { error: 'Servizio email non disponibile' },
+        { status: 503 }
       );
     }
 

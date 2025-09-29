@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         gotham: ['var(--font-gotham)', 'sans-serif'],
-        poppins: ['Poppins', 'sans-serif'],
+        mulish: ['var(--font-mulish)', 'Mulish', 'sans-serif'],
       },
     },
   },

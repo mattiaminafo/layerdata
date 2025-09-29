@@ -20,42 +20,44 @@ export default function ServiceHeader() {
   }, []);
 
   return (
-    <section className="w-full py-16 sm:py-32 md:py-60 relative overflow-hidden">
-      {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-4 text-center text-black">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-gotham mb-4 sm:mb-6 text-black border-r-4 pr-2 mx-auto" style={{width: "fit-content"}}>
-          {displayed}
-          <span className="animate-blink">|</span>
-        </h1>
-        
-        <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-black/90 mb-6 sm:mb-8 md:mb-12 max-w-4xl mx-auto leading-relaxed">
-          {t('serviceHeader.subtitle')}
-        </p>
-        
-        {/* Button */}
-        <div className="flex justify-center">
-          <button 
-            onClick={() => {
-              document.getElementById('packages-section')?.scrollIntoView({ 
-                behavior: 'smooth' 
-              });
-            }}
-            className="btn btn-active btn-secondary text-base sm:text-lg md:text-xl font-poppins font-semibold px-4 py-3 sm:px-6 sm:py-4"
-          >
-            {t('serviceHeader.button')}
-          </button>
+    <section className="section-padding bg-white">
+      <div className="container-max">
+        <div className="text-center max-w-4xl mx-auto">
+          {/* Piano.io style hero - Mobile First */}
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight font-gotham mb-6 sm:mb-8 gradient-text">
+            {displayed}
+            <span className="animate-blink">|</span>
+          </h1>
+
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed font-mulish mb-8 sm:mb-10 md:mb-12">
+            {t('serviceHeader.subtitle')}
+          </p>
+
+          {/* Piano.io style CTA button - Mobile First */}
+          <div className="flex justify-center">
+            <button 
+              onClick={() => {
+                document.getElementById('packages-section')?.scrollIntoView({ 
+                  behavior: 'smooth' 
+                });
+              }}
+              className="btn-primary text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4"
+            >
+              {t('serviceHeader.button')}
+            </button>
+          </div>
         </div>
-        
-        <style jsx>{`
-          @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-          }
-          .animate-blink {
-            animation: blink 1s step-end infinite;
-          }
-        `}</style>
       </div>
+      
+      <style jsx>{`
+        @keyframes blink {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0; }
+        }
+        .animate-blink {
+          animation: blink 1s step-end infinite;
+        }
+      `}</style>
     </section>
   );
 }

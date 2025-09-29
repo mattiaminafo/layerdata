@@ -1,28 +1,17 @@
 "use client";
-import { useEffect, useState } from "react";
-import { InfoModal } from "./modals";
+import { useState } from "react";
 import { useTranslations } from "../lib/useTranslations";
 
 export default function Header() {
-  const [isTrembling, setIsTrembling] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isEventsModalOpen, setIsEventsModalOpen] = useState(false);
   const { t, currentLang } = useTranslations();
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsTrembling(true);
-      setTimeout(() => setIsTrembling(false), 1000); // Tremble for 1 second
-    }, 5000); // Every 5 seconds
-
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <header className="w-full bg-transparent">
-      <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        {/* Logo */}
-        <a href={`/${currentLang}`} className="text-2xl font-bold font-gotham hover:text-gray-700 transition-colors">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex justify-between items-center">
+        {/* Logo - Mobile First */}
+        <a href={`/${currentLang}`} className="text-xl sm:text-2xl font-bold font-gotham hover:text-gray-700 transition-colors">
           {t('header.logo')}
         </a>
 
@@ -46,7 +35,7 @@ export default function Header() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
-            <div className="absolute top-full right-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <div className="absolute top-full right-0 mt-2 w-48 bg-white border border-gray-200 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <a 
                 href={`/${currentLang}/${currentLang === 'en' ? 'services' : 'servizi'}`}
                 className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-black transition-colors text-sm"
@@ -72,14 +61,12 @@ export default function Header() {
             {t('header.communityLearn')}
           </a>
 
-          {/* Info button - Non so cosa mi serve */}
+          {/* Events for companies button */}
           <button 
-            className={`text-black hover:text-gray-700 font-medium text-sm py-2.5 px-4 transition-colors ${
-              isTrembling ? 'animate-pulse' : ''
-            }`}
-            onClick={() => setIsModalOpen(true)}
+            className="text-black hover:text-gray-700 font-medium text-sm py-2.5 px-4 transition-colors"
+            onClick={() => setIsEventsModalOpen(true)}
           >
-            {t('header.dontKnowWhatNeed')}
+            {t('header.eventsForCompanies')}
           </button>
         </div>
 
@@ -94,9 +81,9 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile Navigation Menu */}
+      {/* Mobile Navigation Menu - Mobile First */}
       <div className={`md:hidden ${isMobileMenuOpen ? 'block' : 'hidden'} bg-white border-t border-gray-200`}>
-        <div className="flex flex-col space-y-3 p-3">
+        <div className="flex flex-col space-y-2 sm:space-y-3 p-3 sm:p-4">
           {/* Blue button - Prenota una call */}
           <a 
             href="https://calendar.notion.so/meet/mattiaminaf/of3pa4oup"
@@ -145,36 +132,60 @@ export default function Header() {
             </a>
           </div>
 
-          {/* Black trembling button - Non so cosa mi serve */}
+          {/* Events for companies button */}
           <button 
-            className={`btn bg-black text-white text-sm font-poppins font-semibold py-2 transition-all duration-200 ${
-              isTrembling ? 'animate-pulse' : ''
-            }`}
+            className="btn bg-black text-white text-sm font-poppins font-semibold py-2 transition-all duration-200"
             onClick={() => {
-              setIsModalOpen(true);
+              setIsEventsModalOpen(true);
               setIsMobileMenuOpen(false);
             }}
           >
-            {t('header.dontKnowWhatNeed')}
+            {t('header.eventsForCompanies')}
           </button>
         </div>
       </div>
 
-      {/* Modal - Non so cosa mi serve */}
-      <InfoModal 
-  isOpen={isModalOpen}
-  onClose={() => setIsModalOpen(false)}
-  title={t('modal.title')}
-  content={t('modal.content')}
-  details={[
-    { label: "👥", value: t('modal.details.community') },
-    { label: "🎯", value: t('modal.details.audit') },
-    { label: "📊", value: t('modal.details.analysis') },
-    { label: "🚀", value: t('modal.details.proposal') }
-  ]}
-  size="sm"
-/>
+      {/* Events Modal - Mobile First */}
+      {isEventsModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-3 sm:p-4">
+          <div className="bg-white w-full max-w-md max-h-[80vh] overflow-hidden flex flex-col">
+            {/* Modal Header */}
+            <div className="p-4 sm:p-6 border-b border-gray-200 flex justify-between items-center">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 font-gotham">
+                {t('eventsModal.title')}
+              </h3>
+              <button 
+                className="text-gray-400 hover:text-gray-600 text-xl sm:text-2xl font-bold transition-colors" 
+                onClick={() => setIsEventsModalOpen(false)}
+              >
+                ×
+              </button>
+            </div>
 
+            {/* Modal Content */}
+            <div className="p-4 sm:p-6 flex-1 overflow-y-auto">
+              <p className="text-gray-600 leading-relaxed text-sm sm:text-base mb-4 sm:mb-6">
+                {t('eventsModal.content')}
+              </p>
+            </div>
+
+            {/* Modal Footer */}
+            <div className="p-4 sm:p-6 border-t border-gray-200">
+              <button
+                className="btn-primary w-full text-center text-sm sm:text-base px-4 sm:px-6 py-2.5 sm:py-3"
+                onClick={() => {
+                  setIsEventsModalOpen(false);
+                  document.getElementById('contact-form')?.scrollIntoView({ 
+                    behavior: 'smooth' 
+                  });
+                }}
+              >
+                {t('eventsModal.cta')}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
     </header>
   );
