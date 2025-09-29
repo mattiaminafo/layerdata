@@ -8,7 +8,6 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        gotham: ['var(--font-gotham)', 'sans-serif'],
         mulish: ['var(--font-mulish)', 'Mulish', 'sans-serif'],
       },
     },

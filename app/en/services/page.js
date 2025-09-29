@@ -11,7 +11,7 @@ import ServicesFinalCta from "../../../components/servicesFinalCta";
 
 export default function EnServicesPage() {
   return (
-    <div className="min-h-screen">
+    <div className="w-full overflow-x-hidden">
       <Header />
       
       {/* Hero Section per Servizi */}

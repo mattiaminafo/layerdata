@@ -33,7 +33,7 @@ export default function Tripwires() {
 
   return (
     <section className="w-full py-24 flex flex-col items-center bg-transparent">
-      <h2 className="text-5xl font-bold text-center mb-16 font-gotham">{t('tripwires.title')}</h2>
+      <h2 className="text-5xl font-bold text-center mb-16 font-mulish">{t('tripwires.title')}</h2>
       
       {/* Filtri */}
       <div className="w-full max-w-4xl mx-auto px-4 mb-12">
@@ -85,7 +85,7 @@ export default function Tripwires() {
                     <div className="card-body p-0">
                       <div className="text-sm font-medium text-gray-500 mb-2">{tripwire.category}</div>
                       <button className="text-xl font-semibold mb-2 font-poppins px-2 py-3 rounded-full text-black w-full" style={{backgroundColor: '#41cadf'}}>{tripwire.title}</button>
-                      <div className="text-3xl font-bold font-gotham mb-2">{tripwire.price}</div>
+                      <div className="text-3xl font-bold font-mulish mb-2">{tripwire.price}</div>
                       <div className="text-base mb-4 text-gray-500">{tripwire.period}</div>
                       <div className="text-base text-center mb-6">{tripwire.description}</div>
                       <Button cta="Prenota" />
@@ -122,7 +122,7 @@ export default function Tripwires() {
             >
               <div className="text-xs font-medium text-gray-500 mb-2">{service.category}</div>
               <button className="text-lg font-semibold mb-3 font-poppins px-2 py-3 rounded-full text-black w-full" style={{backgroundColor: '#41cadf'}}>{service.title}</button>
-              <div className="text-2xl font-bold font-gotham mb-2">{service.price}</div>
+              <div className="text-2xl font-bold font-mulish mb-2">{service.price}</div>
               <div className="text-sm mb-4 text-gray-500">{service.period}</div>
               <div className="text-sm text-center mb-6">{service.description}</div>
               <Button cta="Prenota" />

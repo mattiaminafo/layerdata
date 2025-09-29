@@ -1,24 +1,11 @@
 import { Mulish } from "next/font/google";
-import localFont from "next/font/local";
 import "./globals.css";
 
-// Usando Mulish da Google Fonts
+// Usando solo Mulish da Google Fonts
 const mulish = Mulish({ 
   subsets: ["latin"], 
   weight: ["200", "300", "400", "500", "600", "700", "800", "900", "1000"],
   variable: "--font-mulish"
-});
-
-// Manteniamo Gotham per i titoli
-const gotham = localFont({
-  src: [
-    {
-      path: "../public/fonts/gotham-bold.woff2",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-  variable: "--font-gotham",
 });
 
 export const metadata = {
@@ -33,7 +20,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" data-theme="cyberpunk" className={`${mulish.variable} ${gotham.variable}`}>
+    <html lang="en" data-theme="cyberpunk" className={`${mulish.variable}`}>
       <head>
         {/* Google Tag Manager */}
         <script

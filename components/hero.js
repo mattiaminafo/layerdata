@@ -20,46 +20,63 @@ export default function Hero() {
   }, []);
 
   return (
-    <main className="w-full overflow-hidden">
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
-        <div className="text-center max-w-4xl mx-auto">
-          {/* Piano.io style hero - Ultra Mobile First */}
-          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-gray-900 leading-tight font-gotham mb-2 sm:mb-3 md:mb-4 lg:mb-6 gradient-text">
-            {t('hero.mission')}
+    <main className="min-h-screen w-full overflow-hidden relative flex flex-col justify-center items-center pt-16">
+      {/* Piano.io style abstract background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900 to-gray-800">
+        {/* Abstract geometric shapes */}
+        <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-r from-orange-400 to-yellow-400 rounded-full opacity-20 blur-xl"></div>
+        <div className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-r from-pink-400 to-orange-400 rounded-full opacity-15 blur-lg"></div>
+        <div className="absolute bottom-40 left-1/4 w-40 h-40 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full opacity-10 blur-2xl"></div>
+        <div className="absolute bottom-20 right-1/3 w-28 h-28 bg-gradient-to-r from-orange-300 to-pink-300 rounded-full opacity-20 blur-lg"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-gradient-to-r from-orange-300 to-yellow-300 rounded-full opacity-5 blur-3xl"></div>
+      </div>
+      
+      {/* Content overlay */}
+      <div className="relative z-10 w-full max-w-4xl mx-auto px-6 text-center">
+        {/* Brand name */}
+        <div className="mb-8">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white font-mulish tracking-tight">
+            LayerData
           </h1>
-          
-          <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 leading-relaxed font-mulish mb-3 sm:mb-4 md:mb-6 lg:mb-8">
-            {t('hero.description')}
-          </p>
-          
-          {/* Piano.io style CTA buttons - Ultra Mobile First */}
-          <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-4 justify-center items-center mb-4 sm:mb-6 md:mb-8 lg:mb-10">
-            <button 
-              onClick={() => {
-                document.getElementById('our-expertise').scrollIntoView({ 
-                  behavior: 'smooth' 
-                });
-              }}
-              className="bg-[var(--primary-purple)] text-white px-3 sm:px-4 md:px-6 lg:px-8 py-2 sm:py-2.5 md:py-3 lg:py-4 font-semibold hover:bg-[var(--purple-dark)] transition-colors duration-200 text-xs sm:text-sm md:text-base lg:text-lg w-full sm:w-auto"
-            >
-              {t('hero.discoverServices')}
-            </button>
-            
-            <a 
-              href="https://layerdata.substack.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border-2 border-[var(--primary-gray)] text-[var(--primary-gray)] px-3 sm:px-4 md:px-6 lg:px-8 py-2 sm:py-2.5 md:py-3 lg:py-4 font-semibold hover:bg-[var(--primary-gray)] hover:text-white transition-colors duration-200 text-xs sm:text-sm md:text-base lg:text-lg w-full sm:w-auto"
-            >
-              {t('hero.discoverCommunity')}
-            </a>
-          </div>
         </div>
         
-        {/* Piano.io style clients section - Ultra Mobile First */}
-        <div className="border-t border-gray-200">
-          <Clients />
+        {/* Main heading */}
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white font-mulish mb-6 leading-tight">
+          {t('hero.mission').toUpperCase()}
+        </h2>
+        
+        {/* Description */}
+        <p className="text-lg sm:text-xl md:text-2xl text-white/90 font-mulish mb-12 max-w-3xl mx-auto leading-relaxed">
+          {t('hero.description')}
+        </p>
+        
+        {/* CTA buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <button 
+            onClick={() => {
+              document.getElementById('our-expertise').scrollIntoView({ 
+                behavior: 'smooth' 
+              });
+            }}
+            className="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 font-semibold hover:bg-white/20 transition-all duration-200 text-lg w-full sm:w-auto"
+          >
+            {t('hero.discoverServices')}
+          </button>
+          
+          <a 
+            href="https://layerdata.substack.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 font-semibold hover:bg-white/20 transition-all duration-200 text-lg w-full sm:w-auto"
+          >
+            {t('hero.discoverCommunity')}
+          </a>
         </div>
+      </div>
+      
+      {/* Clients section at bottom */}
+      <div className="absolute bottom-0 left-0 right-0 bg-black/20 backdrop-blur-sm">
+        <Clients />
       </div>
     </main>
   );

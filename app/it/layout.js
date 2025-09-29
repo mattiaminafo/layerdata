@@ -18,7 +18,7 @@ const gotham = localFont({
       style: "normal",
     },
   ],
-  variable: "--font-gotham",
+  variable: "--font-mulish",
 });
 
 export const metadata = {

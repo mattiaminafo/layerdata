@@ -13,7 +13,7 @@ export default function Packages() {
     <section className="section-padding bg-gray-50">
       <div className="container-max">
         <div className="text-center mb-12 sm:mb-14 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 leading-tight font-gotham mb-4 sm:mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 leading-tight font-mulish mb-4 sm:mb-6">
             {t('packages.title')}
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed font-mulish">
@@ -26,11 +26,11 @@ export default function Packages() {
           <div className="card text-center">
             {/* Package Header */}
             <div className="mb-6 sm:mb-8">
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3 sm:mb-4 font-gotham">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3 sm:mb-4 font-mulish">
                 {packageData.name}
               </h3>
               <div className="flex items-center justify-center gap-2 mb-3 sm:mb-4">
-                <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-[var(--primary-purple)] font-gotham">
+                <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-[var(--primary-purple)] font-mulish">
                   €{packageData.price}
                 </span>
                 <span className="text-sm sm:text-base md:text-lg text-gray-600">

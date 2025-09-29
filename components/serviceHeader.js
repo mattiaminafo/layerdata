@@ -11,20 +11,21 @@ export default function ServiceHeader() {
 
   useEffect(() => {
     let i = 0;
+    setDisplayed(""); // Reset displayed text
     const interval = setInterval(() => {
       setDisplayed(fullText.slice(0, i + 1));
       i++;
       if (i === fullText.length) clearInterval(interval);
     }, 120);
     return () => clearInterval(interval);
-  }, []);
+  }, [fullText]);
 
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-white pt-20 sm:pt-24 md:pt-28 lg:pt-32">
       <div className="container-max">
         <div className="text-center max-w-4xl mx-auto">
           {/* Piano.io style hero - Mobile First */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight font-gotham mb-6 sm:mb-8 gradient-text">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight font-mulish mb-6 sm:mb-8 gradient-text">
             {displayed}
             <span className="animate-blink">|</span>
           </h1>

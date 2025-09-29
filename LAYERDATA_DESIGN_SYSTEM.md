@@ -7,7 +7,7 @@
 
 ### **Mission Statement**
 "Understand & influence customer behavior" - Un modello integrato che combina analytics, segmentazione e personalizzazione per aumentare il valore del tuo pubblico e ottimizzare i risultati.
-
+'immagine, cufficia
 ### **Brand Personality**
 - **Professionale**: Design pulito e minimalista
 - **Tecnologico**: Elementi geometrici e moderni
@@ -63,16 +63,12 @@
 /* Primary Font - Mulish (Google Fonts) */
 font-family: 'Mulish', sans-serif;
 
-/* Secondary Font - Gotham (Local) */
-font-family: 'Gotham', sans-serif;
-
 /* Fallback */
 font-family: system-ui, -apple-system, sans-serif;
 ```
 
 ### **Font Weights**
-- **Mulish**: 400 (normal), 600 (semibold), 700 (bold)
-- **Gotham**: 400 (normal), 700 (bold)
+- **Mulish**: 200, 300, 400 (normal), 500, 600 (semibold), 700 (bold), 800, 900, 1000
 
 ### **Typography Scale**
 ```css
@@ -85,7 +81,7 @@ font-family: system-ui, -apple-system, sans-serif;
   font-size: 6rem;       /* Extra Large */
   font-weight: 700;
   line-height: 1.2;
-  font-family: 'Gotham', sans-serif;
+  font-family: 'Mulish', sans-serif;
 }
 
 .heading-secondary {
@@ -95,7 +91,7 @@ font-family: system-ui, -apple-system, sans-serif;
   font-size: 4rem;       /* Large Desktop */
   font-weight: 700;
   line-height: 1.3;
-  font-family: 'Gotham', sans-serif;
+  font-family: 'Mulish', sans-serif;
 }
 
 /* Body Text */

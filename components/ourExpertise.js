@@ -26,7 +26,7 @@ export default function OurExpertise() {
             </div>
             
             <div className="relative z-10 mt-auto">
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-3 sm:mb-4 font-gotham">
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-3 sm:mb-4 font-mulish">
                 {t('ourExpertise.servicesTitle')}
               </h3>
               <p className="text-gray-300 leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base lg:text-lg">
@@ -51,7 +51,7 @@ export default function OurExpertise() {
             </div>
             
             <div className="relative z-10 mt-auto">
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-3 sm:mb-4 font-gotham">
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-3 sm:mb-4 font-mulish">
                 {t('ourExpertise.innovationTitle')}
               </h3>
               <p className="text-gray-300 leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base lg:text-lg">
@@ -79,7 +79,7 @@ export default function OurExpertise() {
             </div>
             
             <div className="relative z-10 mt-auto">
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-3 sm:mb-4 font-gotham">
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-3 sm:mb-4 font-mulish">
                 {t('ourExpertise.trainingTitle')}
               </h3>
               <p className="text-gray-300 leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base lg:text-lg">

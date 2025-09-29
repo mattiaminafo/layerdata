@@ -11,7 +11,7 @@ export default function CaseStudy() {
     <section className="section-padding bg-white">
       <div className="container-max">
         <div className="text-center mb-12 sm:mb-14 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 leading-tight font-gotham mb-4 sm:mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 leading-tight font-mulish mb-4 sm:mb-6">
             {t('caseStudy.title')}
           </h2>
         </div>
@@ -22,7 +22,7 @@ export default function CaseStudy() {
             <div key={index} className="card group hover:shadow-xl transition-all duration-300">
               {/* Case Study Header - Mobile First */}
               <div className="mb-4 sm:mb-6">
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3 font-gotham">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3 font-mulish">
                   {study.title}
                 </h3>
                 <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
@@ -78,7 +78,7 @@ export default function CaseStudy() {
           <div className="bg-white w-full max-w-2xl max-h-[80vh] overflow-hidden flex flex-col">
             {/* Modal Header */}
             <div className="p-6 border-b border-gray-200 flex justify-between items-center">
-              <h3 className="text-2xl font-bold text-gray-900 font-gotham">
+              <h3 className="text-2xl font-bold text-gray-900 font-mulish">
                 {caseStudies[open].title}
               </h3>
               <button 

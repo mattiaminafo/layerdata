@@ -13,7 +13,7 @@ export default function TrainingsPage() {
         <div className="max-w-7xl mx-auto px-4">
           {/* Titolo centrale */}
           <div className="text-center mb-8 sm:mb-12">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-black font-gotham leading-tight mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-black font-mulish leading-tight mb-6">
               Formazione & Training
             </h1>
             
@@ -82,7 +82,7 @@ export default function TrainingsPage() {
       {/* Contenuto aggiuntivo della pagina può essere aggiunto qui */}
       <section className="w-full py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black font-gotham mb-8">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black font-mulish mb-8">
             Pronto a iniziare il tuo percorso formativo?
           </h2>
           <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto mb-8">

@@ -20,10 +20,10 @@ export default function ServicesSections() {
             <div key={index} className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
               {/* Testo */}
               <div className={index % 2 === 0 ? "lg:order-1" : "lg:order-2"}>
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6 font-gotham">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6 font-mulish">
                   {service.title}
                 </h2>
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-700 mb-3 sm:mb-4 font-gotham">
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-700 mb-3 sm:mb-4 font-mulish">
                   {service.subtitle}
                 </h3>
                 <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-6 sm:mb-8">

@@ -5,8 +5,8 @@ export default function Clients() {
   const { t } = useTranslations();
   
   return (
-    <section className="w-full flex flex-col items-center py-1 sm:py-2 md:py-3 lg:py-4">
-      <h2 className="text-center text-sm sm:text-base lg:text-lg mb-1 sm:mb-2 md:mb-3 font-poppins font-medium">{t('clients.title')}</h2>
+    <section className="w-full flex flex-col items-center py-4 sm:py-6 md:py-8">
+      <h2 className="text-center text-sm sm:text-base lg:text-lg mb-4 sm:mb-6 font-mulish font-medium text-white/80">{t('clients.title')}</h2>
       
       {/* Scrolling logos container */}
       <div className="w-full overflow-hidden">
