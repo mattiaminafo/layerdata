@@ -51,7 +51,7 @@ export default function Hero() {
         </p>
         
         {/* CTA buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 sm:mb-16 md:mb-20 lg:mb-24">
           <button 
             onClick={() => {
               document.getElementById('our-expertise').scrollIntoView({ 
