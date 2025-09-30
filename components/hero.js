@@ -1,23 +1,9 @@
 "use client";
-import { useEffect, useState } from "react";
-import Button from "./button";
 import Clients from "./clients";
 import { useTranslations } from "../lib/useTranslations";
 
 export default function Hero() {
-  const fullText = "LayerData";
-  const [displayed, setDisplayed] = useState("");
   const { t } = useTranslations();
-
-  useEffect(() => {
-    let i = 0;
-    const interval = setInterval(() => {
-      setDisplayed(fullText.slice(0, i + 1));
-      i++;
-      if (i === fullText.length) clearInterval(interval);
-    }, 120);
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <main className="min-h-screen w-full overflow-hidden relative flex flex-col justify-center items-center pt-16">
@@ -33,17 +19,10 @@ export default function Hero() {
       
       {/* Content overlay */}
       <div className="relative z-10 w-full max-w-4xl mx-auto px-6 text-center">
-        {/* Brand name */}
-        <div className="mb-8">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white font-mulish tracking-tight">
-            LayerData
-          </h1>
-        </div>
-        
         {/* Main heading */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white font-mulish mb-6 leading-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white font-mulish mb-6 leading-tight">
           {t('hero.mission').toUpperCase()}
-        </h2>
+        </h1>
         
         {/* Description */}
         <p className="text-lg sm:text-xl md:text-2xl text-white/90 font-mulish mb-12 max-w-3xl mx-auto leading-relaxed">
