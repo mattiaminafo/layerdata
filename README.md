@@ -36,7 +36,7 @@ Create a `.env.local` file in the root directory with the following variables:
 ```bash
 # Resend API Key
 # Get your API key from https://resend.com/api-keys
-RESEND_API_KEY=re_your_api_key_here
+RESEND_API_KEY=re_ShUH5trW_HUw6c8xD3sGEMSPZBKABwXBv
 ```
 
 ### Resend Setup
