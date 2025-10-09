@@ -6,7 +6,7 @@ export default function Clients() {
   
   return (
     <section className="w-full flex flex-col items-center py-4 sm:py-6 md:py-8 lg:py-10">
-      <h2 className="text-center text-sm sm:text-base lg:text-lg mb-4 sm:mb-6 md:mb-8 font-mulish font-medium text-white/80">{t('clients.title')}</h2>
+      <h2 className="text-center text-sm sm:text-base lg:text-lg mb-4 sm:mb-6 md:mb-8 font-work-sans font-medium text-white/80">{t('clients.title')}</h2>
       
       {/* Scrolling logos container */}
       <div className="w-full overflow-hidden">

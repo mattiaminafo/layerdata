@@ -20,12 +20,12 @@ export default function Hero() {
       {/* Content overlay */}
       <div className="relative z-10 w-full max-w-4xl mx-auto px-6 text-center">
         {/* Main heading */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white font-mulish mb-6 leading-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white font-work-sans mb-6 leading-tight">
           {t('hero.mission').toUpperCase()}
         </h1>
         
         {/* Description */}
-        <p className="text-lg sm:text-xl md:text-2xl text-white/90 font-mulish mb-12 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-lg sm:text-xl md:text-2xl text-white/90 font-work-sans mb-12 max-w-3xl mx-auto leading-relaxed">
           {t('hero.description')}
         </p>
         

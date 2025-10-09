@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "../lib/useTranslations";
+import Logo from "./logo";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -20,13 +21,7 @@ export default function Header() {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex justify-between items-center">
         {/* Logo - Mobile First */}
-        <a href={`/${currentLang}`} className={`text-xl sm:text-2xl font-bold font-mulish transition-colors ${
-          isHomepage 
-            ? 'text-white hover:text-white/80' 
-            : 'text-gray-900 hover:text-gray-700'
-        }`}>
-          {t('header.logo')}
-        </a>
+        <Logo />
 
         {/* Desktop Navigation buttons */}
         <div className="hidden md:flex items-center gap-3 ml-auto">
@@ -35,7 +30,7 @@ export default function Header() {
             href="https://calendar.notion.so/meet/mattiaminaf/of3pa4oup"
             target="_blank"
             rel="noopener noreferrer"
-            className={`font-medium text-sm py-2.5 px-4 transition-colors font-mulish ${
+            className={`font-medium text-sm py-2.5 px-4 transition-colors font-work-sans ${
               isHomepage 
                 ? 'text-white hover:text-white/80' 
                 : 'text-gray-900 hover:text-gray-700'
@@ -46,7 +41,7 @@ export default function Header() {
 
           {/* Menu dropdown - Per le aziende che vogliono crescere */}
           <div className="relative group">
-            <button className={`font-medium text-sm py-2.5 px-4 transition-colors flex items-center font-mulish ${
+            <button className={`font-medium text-xs py-2 px-3 transition-colors flex items-center font-work-sans ${
               isHomepage 
                 ? 'text-white hover:text-white/80' 
                 : 'text-gray-900 hover:text-gray-700'
@@ -59,13 +54,13 @@ export default function Header() {
             <div className="absolute top-full right-0 mt-2 w-48 bg-white border border-gray-200 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <a 
                 href={`/${currentLang}/${currentLang === 'en' ? 'services' : 'servizi'}`}
-                className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors text-sm font-mulish"
+                className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors text-sm font-work-sans"
               >
                 {t('header.services')}
               </a>
               <a 
                 href={`/${currentLang}/trainings`}
-                className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors border-t border-gray-100 text-sm font-mulish"
+                className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors border-t border-gray-100 text-sm font-work-sans"
               >
                 {t('header.training')}
               </a>
@@ -77,7 +72,7 @@ export default function Header() {
             href="https://layerdata.substack.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className={`font-medium text-sm py-2.5 px-4 transition-colors font-mulish ${
+            className={`font-medium text-sm py-2.5 px-4 transition-colors font-work-sans ${
               isHomepage 
                 ? 'text-white hover:text-white/80' 
                 : 'text-gray-900 hover:text-gray-700'
@@ -88,7 +83,7 @@ export default function Header() {
 
           {/* Events for companies button */}
           <button 
-            className={`font-medium text-sm py-2.5 px-4 transition-colors font-mulish ${
+            className={`font-medium text-sm py-2.5 px-4 transition-colors font-work-sans ${
               isHomepage 
                 ? 'text-white hover:text-white/80' 
                 : 'text-gray-900 hover:text-gray-700'
@@ -128,7 +123,7 @@ export default function Header() {
             href="https://calendar.notion.so/meet/mattiaminaf/of3pa4oup"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-active btn-secondary text-sm font-mulish font-semibold w-full py-2"
+            className="btn btn-active btn-secondary text-sm font-work-sans font-semibold w-full py-2"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             {t('header.bookCall')}
@@ -136,19 +131,19 @@ export default function Header() {
 
           {/* Per le aziende che vogliono crescere */}
           <div className="space-y-1">
-            <h3 className="text-lg sm:text-xl font-bold text-gray-900 font-mulish">
+            <h3 className="text-lg sm:text-xl font-bold text-gray-900 font-work-sans">
               {t('header.growthServices')}
             </h3>
             <a 
               href={`/${currentLang}/${currentLang === 'en' ? 'services' : 'servizi'}`}
-              className="block text-gray-700 hover:text-gray-900 transition-colors text-sm font-mulish"
+              className="block text-gray-700 hover:text-gray-900 transition-colors text-sm font-work-sans"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {t('header.services')}
             </a>
             <a 
               href={`/${currentLang}/trainings`}
-              className="block text-gray-700 hover:text-gray-900 transition-colors text-sm font-mulish"
+              className="block text-gray-700 hover:text-gray-900 transition-colors text-sm font-work-sans"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {t('header.training')}
@@ -157,14 +152,14 @@ export default function Header() {
 
           {/* Open Innovation */}
           <div className="space-y-1">
-            <h3 className="text-lg sm:text-xl font-bold text-gray-900 font-mulish">
+            <h3 className="text-lg sm:text-xl font-bold text-gray-900 font-work-sans">
               {t('header.communityLearn')}
             </h3>
             <a 
               href="https://layerdata.substack.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="block text-gray-700 hover:text-gray-900 transition-colors text-sm font-mulish"
+              className="block text-gray-700 hover:text-gray-900 transition-colors text-sm font-work-sans"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {t('header.communityLearn')}
@@ -173,7 +168,7 @@ export default function Header() {
 
           {/* Events for companies */}
           <button 
-            className="text-left text-gray-700 hover:text-gray-900 transition-colors text-sm font-mulish"
+            className="text-left text-gray-700 hover:text-gray-900 transition-colors text-sm font-work-sans"
             onClick={() => {
               setIsEventsModalOpen(true);
               setIsMobileMenuOpen(false);
@@ -189,7 +184,7 @@ export default function Header() {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-start justify-center z-50 p-4 pt-24 sm:pt-20 md:items-center md:pt-4">
           <div className="bg-white rounded-lg p-4 sm:p-6 max-w-md w-full max-h-[90vh] overflow-y-auto">
             <div className="flex justify-between items-center mb-4">
-              <h2 className="text-xl font-bold text-gray-900 font-mulish">
+              <h2 className="text-xl font-bold text-gray-900 font-work-sans">
                 {t('eventsModal.title')}
               </h2>
               <button 
@@ -201,7 +196,7 @@ export default function Header() {
                 </svg>
               </button>
             </div>
-            <p className="text-gray-600 mb-6 font-mulish">
+            <p className="text-gray-600 mb-6 font-work-sans">
               {t('eventsModal.content')}
             </p>
             <button 
@@ -209,7 +204,7 @@ export default function Header() {
                 setIsEventsModalOpen(false);
                 document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="w-full bg-[var(--primary-purple)] text-white py-3 px-4 font-semibold hover:bg-[var(--purple-dark)] transition-colors font-mulish"
+              className="w-full bg-[var(--primary-purple)] text-white py-3 px-4 font-semibold hover:bg-[var(--purple-dark)] transition-colors font-work-sans"
             >
               {t('eventsModal.cta')}
             </button>

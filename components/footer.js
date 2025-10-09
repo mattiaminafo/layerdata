@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="w-full border-t border-gray-200 py-8 px-4 bg-transparent">
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
-        <div className="text-base font-bold font-mulish">{t('header.logo')}</div>
+        <div className="text-base font-bold font-work-sans">{t('header.logo')}</div>
         
         {/* Language Selector */}
         <div className="flex justify-center">

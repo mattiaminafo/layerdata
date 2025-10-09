@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        mulish: ['var(--font-mulish)', 'Mulish', 'sans-serif'],
+        'work-sans': ['var(--font-work-sans)', 'Work Sans', 'sans-serif'],
       },
     },
   },

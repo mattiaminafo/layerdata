@@ -7,6 +7,7 @@ import ServiceHeader from "../../../components/serviceHeader";
 import Clients from "../../../components/clients";
 import Process from "../../../components/process";
 import ServicesSections from "../../../components/servicesSections";
+import ServicesIntro from "../../../components/servicesIntro";
 import ServicesFinalCta from "../../../components/servicesFinalCta";
 
 export default function EnServicesPage() {
@@ -17,6 +18,9 @@ export default function EnServicesPage() {
       {/* Hero Section per Servizi */}
       <ServiceHeader /> 
       <Clients />
+    
+      {/* Intro / Value statement */}
+      <ServicesIntro />
     
       {/* Nuove sezioni servizi */}
       <ServicesSections />

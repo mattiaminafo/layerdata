@@ -6,7 +6,7 @@ import "../globals.css";
 const mulish = Mulish({ 
   subsets: ["latin"], 
   weight: ["200", "300", "400", "500", "600", "700", "800", "900", "1000"],
-  variable: "--font-mulish"
+  variable: "--font-work-sans"
 });
 
 // Manteniamo Gotham per i titoli
@@ -18,7 +18,7 @@ const gotham = localFont({
       style: "normal",
     },
   ],
-  variable: "--font-mulish",
+  variable: "--font-work-sans",
 });
 
 export const metadata = {
@@ -26,9 +26,9 @@ export const metadata = {
   description: "Creiamo ordine nei tuoi dati aziendali. Soluzioni avanzate di marketing technology, analytics e automazione per aziende in crescita.",
   keywords: "marketing technology, analytics dati, automazione, GA4, GTM, business intelligence",
   icons: {
-    icon: '/layerdata_logo.png',
-    shortcut: '/layerdata_logo.png',
-    apple: '/layerdata_logo.png',
+    icon: '/images/logo_layerdata.png',
+    shortcut: '/images/logo_layerdata.png',
+    apple: '/images/logo_layerdata.png',
   },
   openGraph: {
     title: "LayerData - Soluzioni di Marketing Technology",

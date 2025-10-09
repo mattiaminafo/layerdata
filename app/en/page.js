@@ -1,36 +1,29 @@
 import Header from "../../components/header";
 import Hero from "../../components/hero";
-import OurImpact from "../../components/ourImpact";
-import OurExpertise from "../../components/ourExpertise";
-import Footer from "../../components/footer";
-import OurCommunity from "../../components/ourCommunity";
-import Skills from "../../components/skills";
-import AboutUs from "../../components/aboutus";
+import WhatWeDo from "../../components/whatWeDo";
+import Process from "../../components/process";
+import Specialties from "../../components/specialties";
 import ContactForm from "../../components/contactForm";
+import Footer from "../../components/footer";
 
 export default function EnPage() {
   return (
     <div className="w-full overflow-x-hidden">
       <Header />
       <Hero />
-      <OurImpact />
       
-      <div className="py-2 sm:py-4 md:py-6 lg:py-8 xl:py-12">
-        <OurExpertise />
-      </div>
-
-      <div className="py-2 sm:py-4 md:py-6 lg:py-8 xl:py-12">
-        <OurCommunity />
-      </div>
-
-      <div className="py-2 sm:py-4 md:py-6 lg:py-8 xl:py-12">
-        <Skills />
-      </div>
-
-      <div className="py-2 sm:py-4 md:py-6 lg:py-8 xl:py-12">
-        <AboutUs />
-      </div>
+      {/* What We Do */}
+      <WhatWeDo />
       
+      {/* How We Work */}
+      <div className="py-8 sm:py-16 md:py-32">
+        <Process />
+      </div>
+
+      {/* Specialties */}
+      <Specialties />
+      
+      {/* Contact Form */}
       <ContactForm />
       <Footer />
     </div>

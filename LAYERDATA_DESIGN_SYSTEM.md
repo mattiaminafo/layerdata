@@ -60,15 +60,15 @@
 
 ### **Font Stack**
 ```css
-/* Primary Font - Mulish (Google Fonts) */
-font-family: 'Mulish', sans-serif;
+/* Primary Font - Work Sans (Google Fonts) */
+font-family: 'Work Sans', sans-serif;
 
 /* Fallback */
 font-family: system-ui, -apple-system, sans-serif;
 ```
 
 ### **Font Weights**
-- **Mulish**: 200, 300, 400 (normal), 500, 600 (semibold), 700 (bold), 800, 900, 1000
+- **Work Sans**: 100, 200, 300, 400 (normal), 500, 600 (semibold), 700 (bold), 800, 900
 
 ### **Typography Scale**
 ```css

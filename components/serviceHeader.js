@@ -25,12 +25,12 @@ export default function ServiceHeader() {
       <div className="container-max">
         <div className="text-center max-w-4xl mx-auto">
           {/* Piano.io style hero - Mobile First */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight font-mulish mb-6 sm:mb-8 gradient-text">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight font-work-sans mb-6 sm:mb-8 gradient-text">
             {displayed}
             <span className="animate-blink">|</span>
           </h1>
 
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed font-mulish mb-8 sm:mb-10 md:mb-12">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed font-work-sans mb-8 sm:mb-10 md:mb-12">
             {t('serviceHeader.subtitle')}
           </p>
 

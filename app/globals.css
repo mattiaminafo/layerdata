@@ -39,7 +39,7 @@
 }
 
 body {
-  font-family: var(--font-mulish), 'Mulish', sans-serif;
+  font-family: var(--font-work-sans), 'Work Sans', sans-serif;
   background-color: var(--white);
   color: var(--black);
   line-height: 1.6;
@@ -77,15 +77,15 @@ html {
   }
   
   .heading-primary {
-    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight font-mulish;
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight font-work-sans;
   }
   
   .heading-secondary {
-    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight font-mulish;
+    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight font-work-sans;
   }
   
   .text-large {
-    @apply text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed font-mulish;
+    @apply text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed font-work-sans;
   }
   
   .gradient-bg {

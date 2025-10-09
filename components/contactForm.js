@@ -60,10 +60,10 @@ export default function ContactForm() {
       <div className="container-max">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12 sm:mb-14 md:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight font-mulish mb-4 sm:mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight font-work-sans mb-4 sm:mb-6">
               {t('contactForm.title')}
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed font-mulish">
+            <p className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed font-work-sans">
               {t('contactForm.subtitle')}
             </p>
           </div>

@@ -9,10 +9,10 @@ export default function Process() {
     <section className="section-padding bg-white">
       <div className="container-max">
         <div className="text-center mb-12 sm:mb-14 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 leading-tight font-mulish mb-4 sm:mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 leading-tight font-work-sans mb-4 sm:mb-6">
             {t('process.title')}
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed font-mulish max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed font-work-sans max-w-3xl mx-auto">
             {t('process.subtitle')}
           </p>
         </div>

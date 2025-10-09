@@ -1,26 +1,26 @@
-import { Mulish } from "next/font/google";
+import { Work_Sans } from "next/font/google";
 import "./globals.css";
 
-// Usando solo Mulish da Google Fonts
-const mulish = Mulish({ 
+// Usando Work Sans da Google Fonts
+const workSans = Work_Sans({ 
   subsets: ["latin"], 
-  weight: ["200", "300", "400", "500", "600", "700", "800", "900", "1000"],
-  variable: "--font-mulish"
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-work-sans"
 });
 
 export const metadata = {
   title: "LayerData",
   description: "We create order in your business data",
   icons: {
-    icon: '/layerdata_logo.png',
-    shortcut: '/layerdata_logo.png',
-    apple: '/layerdata_logo.png',
+    icon: '/images/logo_layerdata.png',
+    shortcut: '/images/logo_layerdata.png',
+    apple: '/images/logo_layerdata.png',
   },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" data-theme="cyberpunk" className={`${mulish.variable}`}>
+    <html lang="en" data-theme="cyberpunk" className={`${workSans.variable}`}>
       <head>
         {/* Google Tag Manager */}
         <script
