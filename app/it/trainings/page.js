@@ -9,7 +9,7 @@ export default function ItTrainingsPage() {
       <Header />
       
       {/* Head Section */}
-      <section className="w-full py-16 sm:py-20 md:py-24 lg:py-32">
+      <section className="w-full pt-24 sm:pt-28 md:pt-32 lg:pt-36 pb-16 sm:pb-20 md:pb-24 lg:pb-32">
         <div className="max-w-7xl mx-auto px-4">
           {/* Titolo centrale */}
           <div className="text-center mb-8 sm:mb-12">

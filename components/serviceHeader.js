@@ -21,7 +21,7 @@ export default function ServiceHeader() {
   }, [fullText]);
 
   return (
-    <section className="section-padding bg-white pt-20 sm:pt-24 md:pt-28 lg:pt-32">
+    <section className="section-padding bg-white pt-24 sm:pt-28 md:pt-32 lg:pt-36">
       <div className="container-max">
         <div className="text-center max-w-4xl mx-auto">
           {/* Piano.io style hero - Mobile First */}

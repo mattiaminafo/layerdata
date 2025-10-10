@@ -59,6 +59,12 @@ export default function Header() {
                 {t('header.services')}
               </a>
               <a 
+                href={`/${currentLang}/${currentLang === 'en' ? 'products' : 'prodotti'}`}
+                className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors border-t border-gray-100 text-sm font-work-sans"
+              >
+                {t('header.products')}
+              </a>
+              <a 
                 href={`/${currentLang}/trainings`}
                 className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors border-t border-gray-100 text-sm font-work-sans"
               >
@@ -140,6 +146,13 @@ export default function Header() {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {t('header.services')}
+            </a>
+            <a 
+              href={`/${currentLang}/${currentLang === 'en' ? 'products' : 'prodotti'}`}
+              className="block text-gray-700 hover:text-gray-900 transition-colors text-sm font-work-sans"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              {t('header.products')}
             </a>
             <a 
               href={`/${currentLang}/trainings`}

@@ -26,10 +26,12 @@ export default function WhatWeDo() {
           {whatWeDo.services.map((service, index) => (
             <div key={index} className="group">
               <div className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 hover:shadow-xl hover:border-gray-300 transition-all duration-300 h-full">
-                {/* Icon */}
-                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6">
-                  {service.icon}
-                </div>
+                {/* Icon - only render if icon exists */}
+                {service.icon && (
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6">
+                    {service.icon}
+                  </div>
+                )}
 
                 {/* Title */}
                 <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 sm:mb-3 font-work-sans">

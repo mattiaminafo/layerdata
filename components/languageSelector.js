@@ -14,6 +14,8 @@ export default function LanguageSelector() {
   const pathTranslations = {
     '/services': '/servizi',
     '/servizi': '/services',
+    '/products': '/prodotti',
+    '/prodotti': '/products',
     '/trainings': '/trainings', // Same in both languages
   };
   
