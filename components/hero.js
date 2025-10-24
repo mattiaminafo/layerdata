@@ -6,7 +6,7 @@ export default function Hero() {
   const { t } = useTranslations();
 
   return (
-    <main className="min-h-screen w-full overflow-hidden relative flex flex-col justify-center items-center pt-16">
+    <main className="min-h-screen w-full overflow-hidden relative flex flex-col justify-between items-center pt-16 pb-32 md:pb-40 lg:pb-48">
       {/* Dark elegant background with turquoise accents */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black">
         {/* Modern geometric shapes with turquoise accents */}
@@ -18,7 +18,7 @@ export default function Hero() {
       </div>
       
       {/* Content overlay */}
-      <div className="relative z-10 w-full max-w-4xl mx-auto px-6 text-center">
+      <div className="relative z-10 w-full max-w-4xl mx-auto px-6 text-center flex-1 flex flex-col justify-center">
         {/* Main heading */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white font-work-sans mb-6 leading-tight">
           {t('hero.mission').toUpperCase()}
@@ -30,7 +30,7 @@ export default function Hero() {
         </p>
         
         {/* CTA buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 sm:mb-16 md:mb-20 lg:mb-24">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 sm:mb-12 md:mb-16">
           <button 
             onClick={() => {
               document.getElementById('contact-form').scrollIntoView({ 
