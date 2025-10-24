@@ -10,7 +10,8 @@ export default function ContactForm() {
     email: '',
     azienda: '',
     ruolo: '',
-    richiesta: ''
+    richiesta: '',
+    messaggio: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
@@ -43,7 +44,8 @@ export default function ContactForm() {
           email: '',
           azienda: '',
           ruolo: '',
-          richiesta: ''
+          richiesta: '',
+          messaggio: ''
         });
       } else {
         setSubmitStatus('error');
@@ -113,6 +115,7 @@ export default function ContactForm() {
                     name="azienda"
                     value={formData.azienda}
                     onChange={handleChange}
+                    required
                     className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 focus:ring-2 focus:ring-[var(--primary-purple)] focus:border-transparent transition-colors"
                     placeholder={t('contactForm.companyPlaceholder')}
                   />
@@ -128,6 +131,7 @@ export default function ContactForm() {
                     name="ruolo"
                     value={formData.ruolo}
                     onChange={handleChange}
+                    required
                     className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 focus:ring-2 focus:ring-[var(--primary-purple)] focus:border-transparent transition-colors"
                     placeholder={t('contactForm.rolePlaceholder')}
                   />
@@ -144,9 +148,24 @@ export default function ContactForm() {
                   value={formData.richiesta}
                   onChange={handleChange}
                   required
-                  rows={5}
+                  rows={4}
                   className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 focus:ring-2 focus:ring-[var(--primary-purple)] focus:border-transparent transition-colors resize-vertical"
                   placeholder={t('contactForm.requestPlaceholder')}
+                />
+              </div>
+
+              <div>
+                <label htmlFor="messaggio" className="block text-sm font-semibold text-gray-900 mb-2">
+                  {t('contactForm.message')}
+                </label>
+                <textarea
+                  id="messaggio"
+                  name="messaggio"
+                  value={formData.messaggio}
+                  onChange={handleChange}
+                  rows={3}
+                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 focus:ring-2 focus:ring-[var(--primary-purple)] focus:border-transparent transition-colors resize-vertical"
+                  placeholder={t('contactForm.messagePlaceholder')}
                 />
               </div>
 

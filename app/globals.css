@@ -3,18 +3,19 @@
 @tailwind utilities;
 
 :root {
-  /* LayerData Palette - Inspired by Piano.io */
-  --primary-beige: #d0b3a3;
-  --primary-gray: #9895a1;
-  --primary-purple: #c6addc;
+  /* LayerData SaaS Palette - Dark Elegant + Turquoise Accents */
+  --primary-dark: #0d0e12;
+  --primary-teal: #00ffd1;
+  --primary-blue: #3b82f6;
+  --primary-purple: #8b5cf6;
   
   /* Extended palette */
-  --beige-light: #e8d5c7;
-  --beige-dark: #b89a8a;
-  --gray-light: #b5b2bc;
-  --gray-dark: #7a7780;
-  --purple-light: #d8c5e8;
-  --purple-dark: #a895c4;
+  --teal-light: #34d399;
+  --teal-dark: #00d4aa;
+  --blue-light: #60a5fa;
+  --blue-dark: #2563eb;
+  --purple-light: #a78bfa;
+  --purple-dark: #7c3aed;
   
   /* Neutral colors */
   --white: #ffffff;
@@ -29,6 +30,17 @@
   --gray-700: #374151;
   --gray-800: #1f2937;
   --gray-900: #111827;
+  
+  /* Legacy colors for backward compatibility */
+  --primary-beige: #d0b3a3;
+  --primary-gray: #9895a1;
+  --primary-purple: #c6addc;
+  --beige-light: #e8d5c7;
+  --beige-dark: #b89a8a;
+  --gray-light: #b5b2bc;
+  --gray-dark: #7a7780;
+  --purple-light: #d8c5e8;
+  --purple-dark: #a895c4;
 }
 
 @media (prefers-color-scheme: dark) {

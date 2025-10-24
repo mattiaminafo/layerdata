@@ -1,8 +1,12 @@
 import Header from "../../components/header";
 import Hero from "../../components/hero";
-import WhatWeDo from "../../components/whatWeDo";
-import Process from "../../components/process";
-import Specialties from "../../components/specialties";
+import WhatIsLayerdata from "../../components/whatIsLayerdata";
+import HowItWorks from "../../components/howItWorks";
+import TargetAudience from "../../components/targetAudience";
+import TechnicalArchitecture from "../../components/technicalArchitecture";
+import BeforeAfter from "../../components/beforeAfter";
+import Results from "../../components/results";
+import Integration from "../../components/integration";
 import ContactForm from "../../components/contactForm";
 import Footer from "../../components/footer";
 
@@ -12,16 +16,26 @@ export default function ItPage() {
       <Header />
       <Hero />
       
-      {/* What We Do */}
-      <WhatWeDo />
+      {/* What Is Layerdata */}
+      <WhatIsLayerdata />
       
-      {/* How We Work */}
-      <div className="py-8 sm:py-16 md:py-32">
-        <Process />
-      </div>
-
-      {/* Specialties */}
-      <Specialties />
+      {/* How It Works */}
+      <HowItWorks />
+      
+      {/* Target Audience */}
+      <TargetAudience />
+      
+      {/* Technical Architecture */}
+      <TechnicalArchitecture />
+      
+      {/* Before After Comparison */}
+      <BeforeAfter />
+      
+      {/* Results */}
+      <Results />
+      
+      {/* Integration */}
+      <Integration />
       
       {/* Contact Form */}
       <ContactForm />

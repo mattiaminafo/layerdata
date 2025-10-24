@@ -1,44 +1,58 @@
 import Header from "../../../components/header";
 import AboutUs from "../../../components/aboutus";
-import Packages from "../../../components/packages";
-import CaseStudy from "../../../components/casestudy";
 import Footer from "../../../components/footer";
-import ServiceHeader from "../../../components/serviceHeader";
-import Clients from "../../../components/clients";
-import Process from "../../../components/process";
-import ServicesSections from "../../../components/servicesSections";
-import ServicesIntro from "../../../components/servicesIntro";
-import ServicesFinalCta from "../../../components/servicesFinalCta";
+import AboutHero from "../../../components/aboutHero";
+import AboutPhilosophy from "../../../components/aboutPhilosophy";
+import AboutArchitecture from "../../../components/aboutArchitecture";
+import AboutIntegration from "../../../components/aboutIntegration";
+import AboutImpact from "../../../components/aboutImpact";
+import AboutWhyItWorks from "../../../components/aboutWhyItWorks";
+import AboutCorePhilosophy from "../../../components/aboutCorePhilosophy";
+import AboutSecurity from "../../../components/aboutSecurity";
+import AboutResults from "../../../components/aboutResults";
+import AboutCta from "../../../components/aboutCta";
+import AboutPricing from "../../../components/aboutPricing";
 
-export default function ItServiziPage() {
+export default function ItAboutPage() {
   return (
     <div className="w-full overflow-x-hidden">
       <Header />
       
-      {/* Hero Section per Servizi */}
-      <ServiceHeader /> 
-      <Clients />
-    
-      {/* Intro / Value statement */}
-      <ServicesIntro />
-    
-      {/* Nuove sezioni servizi */}
-      <ServicesSections />
+      {/* About Hero */}
+      <AboutHero />
       
-      {/* CTA finale */}
-      <ServicesFinalCta />
-
-      <div className="py-8 sm:py-16 md:py-32">
-        <Process />
-      </div>
-
-      <div className="py-8 sm:py-16 md:py-32" id="packages-section">
-        <Packages />
-      </div>
+      {/* Philosophy */}
+      <AboutPhilosophy />
       
-      <div className="py-8 sm:py-16 md:py-32">
-        <CaseStudy />
-      </div>
+      {/* Architecture */}
+      <AboutArchitecture />
+      
+      {/* Integration */}
+      <AboutIntegration />
+      
+      {/* Impact */}
+      <AboutImpact />
+      
+      {/* Why It Works */}
+      <AboutWhyItWorks />
+      
+      {/* Core Philosophy */}
+      <AboutCorePhilosophy />
+      
+      {/* Security */}
+      <AboutSecurity />
+      
+      {/* Results */}
+      <AboutResults />
+      
+      {/* Pricing */}
+      <AboutPricing />
+      
+      {/* CTA */}
+      <AboutCta />
+      
+      {/* About Us - Team */}
+      <AboutUs />
       
       <Footer />
     </div>
