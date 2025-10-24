@@ -24,7 +24,7 @@ export default function AboutPhilosophy() {
           {/* Quote */}
           <div className="bg-gradient-to-r from-teal-50 to-blue-50 border-l-4 border-teal-500 p-6 rounded-r-lg mb-8">
             <blockquote className="text-lg sm:text-xl font-semibold text-gray-800 font-work-sans italic">
-              "{about.philosophy.quote}"
+              &ldquo;{about.philosophy.quote}&rdquo;
             </blockquote>
           </div>
           

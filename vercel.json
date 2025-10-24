@@ -10,11 +10,6 @@
       "source": "/servizi",
       "destination": "/it/servizi",
       "permanent": true
-    },
-    {
-      "source": "/trainings",
-      "destination": "/it/trainings", 
-      "permanent": true
     }
   ],
   "headers": [

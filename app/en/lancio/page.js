@@ -102,7 +102,7 @@ export default function LancioPage() {
             Request Your Free Consultation
           </h2>
           <p className="text-center text-black font-work-sans mb-8">
-            Fill out the form and we'll contact you within 24 hours to discuss your personalized strategy
+            Fill out the form and we&apos;ll contact you within 24 hours to discuss your personalized strategy
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-4 max-w-xl mx-auto">

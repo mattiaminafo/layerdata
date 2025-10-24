@@ -32,7 +32,7 @@ export default function AboutCorePhilosophy() {
           {/* Quote */}
           <div className="bg-gradient-to-r from-teal-500/20 to-blue-500/20 border-l-4 border-teal-400 p-6 rounded-r-lg">
             <blockquote className="text-lg sm:text-xl font-semibold text-white font-work-sans italic">
-              "{about.corePhilosophy.quote}"
+              &ldquo;{about.corePhilosophy.quote}&rdquo;
             </blockquote>
           </div>
         </div>
