@@ -1,11 +1,10 @@
 import Header from "../../components/header";
 import Hero from "../../components/hero";
-import WhatIsLayerdata from "../../components/whatIsLayerdata";
-import HowItWorks from "../../components/howItWorks";
-import TargetAudience from "../../components/targetAudience";
-import TechnicalArchitecture from "../../components/technicalArchitecture";
-import BeforeAfter from "../../components/beforeAfter";
-import Results from "../../components/results";
+import HomePaths from "../../components/homePaths";
+import HomeSystem from "../../components/homeSystem";
+import HomeLayerHub from "../../components/homeLayerHub";
+import HomeProof from "../../components/homeProof";
+import HomeFinalCta from "../../components/homeFinalCta";
 import Integration from "../../components/integration";
 import ContactForm from "../../components/contactForm";
 import Footer from "../../components/footer";
@@ -16,25 +15,11 @@ export default function EnPage() {
       <Header />
       <Hero />
       
-      {/* What Is Layerdata */}
-      <WhatIsLayerdata />
-      
-      {/* How It Works */}
-      <HowItWorks />
-      
-      {/* Target Audience */}
-      <TargetAudience />
-      
-      {/* Technical Architecture */}
-      <TechnicalArchitecture />
-      
-      {/* Before After Comparison */}
-      <BeforeAfter />
-      
-      {/* Results */}
-      <Results />
-      
-      {/* Integration */}
+      <HomePaths />
+      <HomeSystem />
+      <HomeLayerHub />
+      <HomeProof />
+      <HomeFinalCta />
       <Integration />
       
       {/* Contact Form */}

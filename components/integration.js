@@ -30,7 +30,7 @@ export default function Integration() {
               <div className="space-y-3">
                 {category.tools.map((tool, toolIndex) => (
                   <div key={toolIndex} className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-gradient-to-r from-teal-500 to-blue-500 rounded-full"></div>
+                    <div className="w-2 h-2 bg-gradient-to-r from-[var(--accent-lime)] to-[var(--accent-teal)] rounded-full"></div>
                     <span className="text-base text-gray-700 font-work-sans">
                       {tool}
                     </span>
@@ -43,7 +43,12 @@ export default function Integration() {
 
         {/* CTA */}
         <div className="text-center">
-          <button className="bg-gradient-to-r from-teal-500 to-teal-400 text-white px-8 py-4 font-semibold rounded-lg hover:from-teal-600 hover:to-teal-500 transition-all duration-200 text-lg font-work-sans">
+          <button
+            onClick={() => {
+              document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="inline-flex items-center justify-center bg-[var(--accent-lime)] text-black px-8 py-4 font-semibold rounded-full hover:brightness-110 transition-all duration-200 text-lg font-work-sans"
+          >
             {integration.cta}
           </button>
         </div>
