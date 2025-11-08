@@ -25,6 +25,11 @@ export default function ServicesBuild() {
                 {area.cta}
               </span>
             );
+            const secondaryButton = area.secondaryCta && (
+              <span className="inline-flex items-center justify-center border border-[var(--border-strong)] text-white font-semibold px-5 py-2.5 rounded-full text-sm sm:text-base hover:bg-white/10 transition-all duration-200">
+                {area.secondaryCta}
+              </span>
+            );
 
             return (
               <div key={index} className="card h-full flex flex-col gap-5">
@@ -44,20 +49,68 @@ export default function ServicesBuild() {
                     {area.description}
                   </p>
                 </div>
+                {area.purpose && (
+                  <div className="bg-white/5 border border-[var(--border-subtle)] rounded-xl p-4">
+                    <p className="text-sm sm:text-base text-white/75 font-work-sans leading-relaxed">
+                      {area.purpose}
+                    </p>
+                  </div>
+                )}
+                {Array.isArray(area.whatWeDo) && area.whatWeDo.length > 0 && (
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.3rem] text-white/50 font-semibold mb-3">
+                      What we do
+                    </p>
+                    <ul className="space-y-2 text-sm sm:text-base text-white/70 font-work-sans leading-relaxed">
+                      {area.whatWeDo.map((item, idx) => (
+                        <li key={idx} className="flex items-start gap-2">
+                          <span className="mt-1 inline-flex h-2 w-2 rounded-full bg-[var(--accent-lime)]"></span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {Array.isArray(area.whatYouGet) && area.whatYouGet.length > 0 && (
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.3rem] text-white/50 font-semibold mb-3">
+                      What you get
+                    </p>
+                    <ul className="space-y-2 text-sm sm:text-base text-white/70 font-work-sans leading-relaxed">
+                      {area.whatYouGet.map((item, idx) => (
+                        <li key={idx} className="flex items-start gap-2">
+                          <span className="mt-1 inline-flex h-2 w-2 rounded-full bg-[var(--accent-teal)]"></span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
                 {area.price && (
                   <p className="text-sm font-semibold text-[var(--accent-lime)] font-work-sans">
                     {area.price}
                   </p>
                 )}
-                {area.cta && (
-                  isExternal ? (
-                    <a href={area.href} target="_blank" rel="noopener noreferrer">
-                      {buttonContent}
-                    </a>
-                  ) : (
-                    <Link href={area.href || "#"}>{buttonContent}</Link>
-                  )
-                )}
+                <div className="flex flex-wrap gap-3">
+                  {area.cta && (
+                    isExternal ? (
+                      <a href={area.href} target="_blank" rel="noopener noreferrer">
+                        {buttonContent}
+                      </a>
+                    ) : (
+                      <Link href={area.href || "#"}>{buttonContent}</Link>
+                    )
+                  )}
+                  {secondaryButton && (
+                    isExternal ? (
+                      <a href={area.href} target="_blank" rel="noopener noreferrer">
+                        {secondaryButton}
+                      </a>
+                    ) : (
+                      <Link href={area.href || "#"}>{secondaryButton}</Link>
+                    )
+                  )}
+                </div>
               </div>
             );
           })}
