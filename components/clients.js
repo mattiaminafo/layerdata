@@ -46,14 +46,6 @@ export default function Clients() {
                 className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 xl:w-36 xl:h-36 object-contain"
               />
             </div>
-            {/* UTRAVEL */}
-            <div className="flex flex-col items-center w-24 sm:w-32 md:w-40 lg:w-48">
-              <img 
-                src="/images/utravel-logo.png" 
-                alt="UTRAVEL" 
-                className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 xl:w-36 xl:h-36 object-contain"
-              />
-            </div>
             {/* Rougj */}
             <div className="flex flex-col items-center w-24 sm:w-32 md:w-40 lg:w-48">
               <img 
@@ -111,14 +103,6 @@ export default function Clients() {
               <img 
                 src="/images/oneday-logo.webp" 
                 alt="OneDay" 
-                className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 xl:w-36 xl:h-36 object-contain"
-              />
-            </div>
-            {/* UTRAVEL */}
-            <div className="flex flex-col items-center w-24 sm:w-32 md:w-40 lg:w-48">
-              <img 
-                src="/images/utravel-logo.png" 
-                alt="UTRAVEL" 
                 className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 xl:w-36 xl:h-36 object-contain"
               />
             </div>

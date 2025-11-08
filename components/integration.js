@@ -41,17 +41,7 @@ export default function Integration() {
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="text-center">
-          <button
-            onClick={() => {
-              document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
-            }}
-            className="inline-flex items-center justify-center bg-[var(--accent-lime)] text-black px-8 py-4 font-semibold rounded-full hover:brightness-110 transition-all duration-200 text-lg font-work-sans"
-          >
-            {integration.cta}
-          </button>
-        </div>
+        {/* No CTA required */}
       </div>
     </section>
   );
