@@ -24,7 +24,7 @@ export default function HomePaths() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
           {items.map((item, index) => {
             const isExternal = item.href?.startsWith("http");
             const cardContent = (
