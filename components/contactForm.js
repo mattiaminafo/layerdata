@@ -74,7 +74,7 @@ export default function ContactForm() {
             <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <div>
-                  <label htmlFor="nome" className="block text-sm font-semibold text-gray-900 mb-2">
+                  <label htmlFor="nome" className="block text-sm font-semibold text-gray-500 mb-2">
                     {t('contactForm.name')}
                   </label>
                   <input
@@ -84,13 +84,13 @@ export default function ContactForm() {
                     value={formData.nome}
                     onChange={handleChange}
                     required
-                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 focus:ring-2 focus:ring-[var(--primary-purple)] focus:border-transparent transition-colors"
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 focus:ring-2 focus:ring-[var(--primary-purple)] focus:border-transparent transition-colors text-gray-900 placeholder:text-gray-400"
                     placeholder={t('contactForm.namePlaceholder')}
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-gray-900 mb-2">
+                  <label htmlFor="email" className="block text-sm font-semibold text-gray-500 mb-2">
                     {t('contactForm.email')}
                   </label>
                   <input
@@ -100,13 +100,13 @@ export default function ContactForm() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 focus:ring-2 focus:ring-[var(--primary-purple)] focus:border-transparent transition-colors"
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 focus:ring-2 focus:ring-[var(--primary-purple)] focus:border-transparent transition-colors text-gray-900 placeholder:text-gray-400"
                     placeholder={t('contactForm.emailPlaceholder')}
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="azienda" className="block text-sm font-semibold text-gray-900 mb-2">
+                  <label htmlFor="azienda" className="block text-sm font-semibold text-gray-500 mb-2">
                     {t('contactForm.company')}
                   </label>
                   <input
@@ -116,13 +116,13 @@ export default function ContactForm() {
                     value={formData.azienda}
                     onChange={handleChange}
                     required
-                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 focus:ring-2 focus:ring-[var(--primary-purple)] focus:border-transparent transition-colors"
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 focus:ring-2 focus:ring-[var(--primary-purple)] focus:border-transparent transition-colors text-gray-900 placeholder:text-gray-400"
                     placeholder={t('contactForm.companyPlaceholder')}
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="ruolo" className="block text-sm font-semibold text-gray-900 mb-2">
+                  <label htmlFor="ruolo" className="block text-sm font-semibold text-gray-500 mb-2">
                     {t('contactForm.role')}
                   </label>
                   <input
@@ -132,14 +132,14 @@ export default function ContactForm() {
                     value={formData.ruolo}
                     onChange={handleChange}
                     required
-                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 focus:ring-2 focus:ring-[var(--primary-purple)] focus:border-transparent transition-colors"
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 focus:ring-2 focus:ring-[var(--primary-purple)] focus:border-transparent transition-colors text-gray-900 placeholder:text-gray-400"
                     placeholder={t('contactForm.rolePlaceholder')}
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="richiesta" className="block text-sm font-semibold text-gray-900 mb-2">
+                <label htmlFor="richiesta" className="block text-sm font-semibold text-gray-500 mb-2">
                   {t('contactForm.request')}
                 </label>
                 <textarea
@@ -149,13 +149,13 @@ export default function ContactForm() {
                   onChange={handleChange}
                   required
                   rows={4}
-                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 focus:ring-2 focus:ring-[var(--primary-purple)] focus:border-transparent transition-colors resize-vertical"
+                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 focus:ring-2 focus:ring-[var(--primary-purple)] focus:border-transparent transition-colors resize-vertical text-gray-900 placeholder:text-gray-400"
                   placeholder={t('contactForm.requestPlaceholder')}
                 />
               </div>
 
               <div>
-                <label htmlFor="messaggio" className="block text-sm font-semibold text-gray-900 mb-2">
+                <label htmlFor="messaggio" className="block text-sm font-semibold text-gray-500 mb-2">
                   {t('contactForm.message')}
                 </label>
                 <textarea
@@ -164,7 +164,7 @@ export default function ContactForm() {
                   value={formData.messaggio}
                   onChange={handleChange}
                   rows={3}
-                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 focus:ring-2 focus:ring-[var(--primary-purple)] focus:border-transparent transition-colors resize-vertical"
+                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 focus:ring-2 focus:ring-[var(--primary-purple)] focus:border-transparent transition-colors resize-vertical text-gray-900 placeholder:text-gray-400"
                   placeholder={t('contactForm.messagePlaceholder')}
                 />
               </div>
