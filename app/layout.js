@@ -12,9 +12,9 @@ export const metadata = {
   title: "LayerData",
   description: "We create order in your business data",
   icons: {
-    icon: '/images/logo_layerdata.png',
-    shortcut: '/images/logo_layerdata.png',
-    apple: '/images/logo_layerdata.png',
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
   },
 };
 
