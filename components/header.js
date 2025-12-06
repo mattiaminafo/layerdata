@@ -37,6 +37,14 @@ export default function Header() {
             {t('header.about')}
           </a>
 
+          {/* How we work */}
+          <a 
+            href={`/${currentLang}/${currentLang === 'en' ? 'how-we-work' : 'come-lavoriamo'}`}
+            className="font-medium text-base py-2.5 px-4 transition-colors font-work-sans text-white hover:text-white/80"
+          >
+            {t('header.howWeWork')}
+          </a>
+
           {/* Community & Learn */}
           <a 
             href="https://thedataclinic.eu"
@@ -89,6 +97,15 @@ export default function Header() {
             onClick={() => setIsMobileMenuOpen(false)}
           >
             {t('header.about')}
+          </a>
+
+          {/* How we work */}
+          <a 
+            href={`/${currentLang}/${currentLang === 'en' ? 'how-we-work' : 'come-lavoriamo'}`}
+            className="block text-white hover:text-white/80 transition-colors text-sm font-work-sans"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            {t('header.howWeWork')}
           </a>
 
           {/* Community & Learn */}
