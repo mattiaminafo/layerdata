@@ -9,7 +9,7 @@ const mulish = Mulish({
   variable: "--font-work-sans"
 });
 
-// Manteniamo Gotham per i titoli
+// Manteniamo Gotham per i titoli (con variabile separata per evitare conflitti)
 const gotham = localFont({
   src: [
     {
@@ -18,7 +18,7 @@ const gotham = localFont({
       style: "normal",
     },
   ],
-  variable: "--font-work-sans",
+  variable: "--font-gotham",
 });
 
 export const metadata = {
@@ -40,7 +40,7 @@ export const metadata = {
 
 export default function ItLayout({ children }) {
   return (
-    <html lang="it" data-theme="cyberpunk" className={`${mulish.variable} ${gotham.variable}`}>
+    <html lang="it" data-theme="cyberpunk" className={`${mulish.variable}`}>
       <head>
         {/* Hreflang tags for multilingual SEO */}
         <link rel="alternate" hrefLang="en" href="https://layerdata.eu/en" />

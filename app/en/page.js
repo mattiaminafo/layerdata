@@ -1,8 +1,8 @@
 import Header from "../../components/header";
 import Hero from "../../components/hero";
+import HomeChallenges from "../../components/homeChallenges";
 import HomePaths from "../../components/homePaths";
 import HomeSystem from "../../components/homeSystem";
-import HomeLayerHub from "../../components/homeLayerHub";
 import HomeProof from "../../components/homeProof";
 import HomeFinalCta from "../../components/homeFinalCta";
 import Integration from "../../components/integration";
@@ -14,10 +14,9 @@ export default function EnPage() {
     <div className="w-full overflow-x-hidden">
       <Header />
       <Hero />
-      
+      <HomeChallenges />
       <HomePaths />
       <HomeSystem />
-      <HomeLayerHub />
       <HomeProof />
       <HomeFinalCta />
       <Integration />
