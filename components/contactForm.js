@@ -58,23 +58,37 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact-form" className="section-padding gradient-bg">
+    <section id="contact-form" className="section-padding bg-bg-primary">
+      {/* Energy line */}
+      <div className="container-max mb-16">
+        <div className="energy-line opacity-20"></div>
+      </div>
+      
       <div className="container-max">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12 sm:mb-14 md:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight font-work-sans mb-4 sm:mb-6">
-              {t('contactForm.title')}
+          <div className="text-center mb-16">
+            <h2 className="heading-secondary font-work-sans mb-6">
+              {t('contactForm.title') ? (
+                <>
+                  {t('contactForm.title').split(' ').slice(0, 1).map((word, index) => (
+                    <span key={index} className="highlight-primary mx-1">
+                      {word}
+                    </span>
+                  ))}
+                  {t('contactForm.title').split(' ').slice(1).join(' ')}
+                </>
+              ) : t('contactForm.title')}
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed font-work-sans">
+            <p className="text-large font-work-sans">
               {t('contactForm.subtitle')}
             </p>
           </div>
 
-          <div className="card max-w-2xl mx-auto">
-            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+          <div className="card max-w-2xl mx-auto border-white/10 p-8 sm:p-10">
+            <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
                 <div>
-                  <label htmlFor="nome" className="block text-sm font-semibold text-gray-500 mb-2">
+                  <label htmlFor="nome" className="block text-sm font-bold text-text-primary mb-3 font-work-sans">
                     {t('contactForm.name')}
                   </label>
                   <input
@@ -84,13 +98,13 @@ export default function ContactForm() {
                     value={formData.nome}
                     onChange={handleChange}
                     required
-                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 focus:ring-2 focus:ring-[var(--primary-purple)] focus:border-transparent transition-colors text-gray-900 placeholder:text-gray-400"
+                    className="w-full px-4 py-3 border-2 border-white/20 bg-bg-primary text-text-primary placeholder:text-text-secondary focus:border-highlight-primary focus:outline-none transition-colors font-work-sans"
                     placeholder={t('contactForm.namePlaceholder')}
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-gray-500 mb-2">
+                  <label htmlFor="email" className="block text-sm font-bold text-text-primary mb-3 font-work-sans">
                     {t('contactForm.email')}
                   </label>
                   <input
@@ -100,13 +114,13 @@ export default function ContactForm() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 focus:ring-2 focus:ring-[var(--primary-purple)] focus:border-transparent transition-colors text-gray-900 placeholder:text-gray-400"
+                    className="w-full px-4 py-3 border-2 border-white/20 bg-bg-primary text-text-primary placeholder:text-text-secondary focus:border-highlight-primary focus:outline-none transition-colors font-work-sans"
                     placeholder={t('contactForm.emailPlaceholder')}
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="azienda" className="block text-sm font-semibold text-gray-500 mb-2">
+                  <label htmlFor="azienda" className="block text-sm font-bold text-text-primary mb-3 font-work-sans">
                     {t('contactForm.company')}
                   </label>
                   <input
@@ -116,13 +130,13 @@ export default function ContactForm() {
                     value={formData.azienda}
                     onChange={handleChange}
                     required
-                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 focus:ring-2 focus:ring-[var(--primary-purple)] focus:border-transparent transition-colors text-gray-900 placeholder:text-gray-400"
+                    className="w-full px-4 py-3 border-2 border-white/20 bg-bg-primary text-text-primary placeholder:text-text-secondary focus:border-highlight-primary focus:outline-none transition-colors font-work-sans"
                     placeholder={t('contactForm.companyPlaceholder')}
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="ruolo" className="block text-sm font-semibold text-gray-500 mb-2">
+                  <label htmlFor="ruolo" className="block text-sm font-bold text-text-primary mb-3 font-work-sans">
                     {t('contactForm.role')}
                   </label>
                   <input
@@ -132,14 +146,14 @@ export default function ContactForm() {
                     value={formData.ruolo}
                     onChange={handleChange}
                     required
-                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 focus:ring-2 focus:ring-[var(--primary-purple)] focus:border-transparent transition-colors text-gray-900 placeholder:text-gray-400"
+                    className="w-full px-4 py-3 border-2 border-white/20 bg-bg-primary text-text-primary placeholder:text-text-secondary focus:border-highlight-primary focus:outline-none transition-colors font-work-sans"
                     placeholder={t('contactForm.rolePlaceholder')}
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="richiesta" className="block text-sm font-semibold text-gray-500 mb-2">
+                <label htmlFor="richiesta" className="block text-sm font-bold text-text-primary mb-3 font-work-sans">
                   {t('contactForm.request')}
                 </label>
                 <textarea
@@ -149,13 +163,13 @@ export default function ContactForm() {
                   onChange={handleChange}
                   required
                   rows={4}
-                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 focus:ring-2 focus:ring-[var(--primary-purple)] focus:border-transparent transition-colors resize-vertical text-gray-900 placeholder:text-gray-400"
+                  className="w-full px-4 py-3 border-2 border-white/20 bg-bg-primary text-text-primary placeholder:text-text-secondary focus:border-highlight-primary focus:outline-none transition-colors resize-vertical font-work-sans"
                   placeholder={t('contactForm.requestPlaceholder')}
                 />
               </div>
 
               <div>
-                <label htmlFor="messaggio" className="block text-sm font-semibold text-gray-500 mb-2">
+                <label htmlFor="messaggio" className="block text-sm font-bold text-text-primary mb-3 font-work-sans">
                   {t('contactForm.message')}
                 </label>
                 <textarea
@@ -164,30 +178,30 @@ export default function ContactForm() {
                   value={formData.messaggio}
                   onChange={handleChange}
                   rows={3}
-                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 focus:ring-2 focus:ring-[var(--primary-purple)] focus:border-transparent transition-colors resize-vertical text-gray-900 placeholder:text-gray-400"
+                  className="w-full px-4 py-3 border-2 border-white/20 bg-bg-primary text-text-primary placeholder:text-text-secondary focus:border-highlight-primary focus:outline-none transition-colors resize-vertical font-work-sans"
                   placeholder={t('contactForm.messagePlaceholder')}
                 />
               </div>
 
-              <div className="text-center">
+              <div className="text-center pt-4">
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="btn-primary text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto"
+                  className="btn-primary text-base sm:text-lg w-full sm:w-auto"
                 >
                   {isSubmitting ? t('contactForm.submitting') : t('contactForm.submit')}
                 </button>
               </div>
 
               {submitStatus === 'success' && (
-                <div className="text-center p-4 bg-green-50 border border-green-200 text-green-800">
-                  <p className="font-semibold">{t('contactForm.success')}</p>
+                <div className="text-center p-6 bg-highlight-primary/20 border-2 border-highlight-primary text-text-primary">
+                  <p className="font-bold font-work-sans">{t('contactForm.success')}</p>
                 </div>
               )}
 
               {submitStatus === 'error' && (
-                <div className="text-center p-4 bg-red-50 border border-red-200 text-red-800">
-                  <p className="font-semibold">{t('contactForm.error')}</p>
+                <div className="text-center p-6 bg-highlight-secondary/20 border-2 border-highlight-secondary text-text-primary">
+                  <p className="font-bold font-work-sans">{t('contactForm.error')}</p>
                 </div>
               )}
             </form>

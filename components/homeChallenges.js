@@ -8,50 +8,64 @@ export default function HomeChallenges() {
   const items = data.items || [];
 
   return (
-    <section id="home-challenges" className="section-padding w-full">
+    <section id="home-challenges" className="section-padding w-full bg-bg-primary">
+      {/* Energy line */}
+      <div className="container-max mb-16">
+        <div className="energy-line-alt opacity-20"></div>
+      </div>
+      
       <div className="container-max">
-        <div className="max-w-4xl mx-auto">
-          {/* Title */}
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight font-work-sans mb-8 text-center">
-            {data.title}
+        <div className="max-w-5xl mx-auto">
+          {/* Title - Headline dominant */}
+          <h2 className="heading-secondary font-work-sans mb-12 text-left">
+            {data.title ? (
+              <>
+                {data.title.split(' ').slice(0, 2).map((word, index) => (
+                  <span key={index} className="highlight-primary mx-1">
+                    {word}
+                  </span>
+                ))}
+                {data.title.split(' ').slice(2).join(' ')}
+              </>
+            ) : data.title}
           </h2>
 
-          {/* Intro */}
-          <p className="text-base sm:text-lg md:text-xl text-white/80 leading-relaxed font-work-sans mb-8 text-center">
+          {/* Intro - Short, functional */}
+          <p className="text-large font-work-sans mb-16 text-left">
             {data.intro}
           </p>
 
           {/* Problem statement */}
-          <div className="mb-12">
-            <p className="text-base sm:text-lg text-white/75 leading-relaxed font-work-sans mb-4">
+          <div className="mb-16">
+            <p className="text-body font-work-sans mb-6">
               {data.problem}
             </p>
-            <p className="text-base sm:text-lg text-white/75 leading-relaxed font-work-sans">
+            <p className="text-body font-work-sans">
               {data.problemDetail}
             </p>
           </div>
 
           {/* Section title */}
-          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight font-work-sans mb-6">
+          <h3 className="heading-tertiary font-work-sans mb-8 text-left">
             {data.sectionTitle}
           </h3>
 
           {/* Section intro */}
-          <p className="text-base sm:text-lg text-white/80 leading-relaxed font-work-sans mb-10">
+          <p className="text-body font-work-sans mb-12">
             {data.sectionIntro}
           </p>
 
-          {/* Challenge items */}
-          <div className="space-y-6 mb-10">
+          {/* Challenge items - Simple cards, no rounded corners */}
+          <div className="space-y-8 mb-16">
             {items.map((item, index) => (
               <div
                 key={index}
-                className="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8"
+                className="card border-white/10 p-8 sm:p-10"
               >
-                <h4 className="text-xl sm:text-2xl font-semibold text-white font-work-sans mb-3">
+                <h4 className="heading-tertiary font-work-sans mb-4">
                   {item.title}
                 </h4>
-                <p className="text-base text-white/70 font-work-sans leading-relaxed">
+                <p className="text-body font-work-sans">
                   {item.description}
                 </p>
               </div>
@@ -59,7 +73,7 @@ export default function HomeChallenges() {
           </div>
 
           {/* Conclusion */}
-          <p className="text-base sm:text-lg text-white/80 leading-relaxed font-work-sans">
+          <p className="text-large font-work-sans">
             {data.conclusion}
           </p>
         </div>
@@ -67,5 +81,6 @@ export default function HomeChallenges() {
     </section>
   );
 }
+
 
 

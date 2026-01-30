@@ -4,6 +4,8 @@ import HomeChallenges from "../../components/homeChallenges";
 import HomePaths from "../../components/homePaths";
 import HomeSystem from "../../components/homeSystem";
 import HomeProof from "../../components/homeProof";
+import HomeAudit from "../../components/homeAudit";
+import HomeAboutUs from "../../components/homeAboutUs";
 import HomeFinalCta from "../../components/homeFinalCta";
 import Integration from "../../components/integration";
 import ContactForm from "../../components/contactForm";
@@ -18,6 +20,8 @@ export default function ItPage() {
       <HomePaths />
       <HomeSystem />
       <HomeProof />
+      <HomeAudit />
+      <HomeAboutUs />
       <HomeFinalCta />
       <Integration />
       

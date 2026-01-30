@@ -6,7 +6,7 @@ export default function Clients() {
   
   return (
     <section className="w-full flex flex-col items-center py-4 sm:py-6 md:py-8 lg:py-10">
-      <h2 className="text-center text-sm sm:text-base lg:text-lg mb-4 sm:mb-6 md:mb-8 font-work-sans font-medium text-white/80">{t('clients.title')}</h2>
+      <h2 className="text-center text-sm sm:text-base lg:text-lg mb-4 sm:mb-6 md:mb-8 font-work-sans font-bold text-text-secondary">{t('clients.title')}</h2>
       
       {/* Scrolling logos container */}
       <div className="w-full overflow-hidden">
@@ -18,23 +18,6 @@ export default function Clients() {
               <img 
                 src="/images/boolean-logo.png" 
                 alt="Boolean" 
-                className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 xl:w-36 xl:h-36 object-contain"
-              />
-            </div>
-            
-            {/* L22 */}
-            <div className="flex flex-col items-center w-24 sm:w-32 md:w-40 lg:w-48">
-              <img 
-                src="/images/l22-logo.png" 
-                alt="L22" 
-                className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 xl:w-36 xl:h-36 object-contain"
-              />
-            </div>
-            {/* Fler */}
-            <div className="flex flex-col items-center w-24 sm:w-32 md:w-40 lg:w-48">
-              <img 
-                src="/images/fler-logo.png" 
-                alt="Fler" 
                 className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 xl:w-36 xl:h-36 object-contain"
               />
             </div>
@@ -79,22 +62,6 @@ export default function Clients() {
               <img 
                 src="/images/boolean-logo.png" 
                 alt="Boolean" 
-                className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 xl:w-36 xl:h-36 object-contain"
-              />
-            </div>
-            {/* L22 */}
-            <div className="flex flex-col items-center w-24 sm:w-32 md:w-40 lg:w-48">
-              <img 
-                src="/images/l22-logo.png" 
-                alt="L22" 
-                className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 xl:w-36 xl:h-36 object-contain"
-              />
-            </div>
-            {/* Fler */}
-            <div className="flex flex-col items-center w-24 sm:w-32 md:w-40 lg:w-48">
-              <img 
-                src="/images/fler-logo.png" 
-                alt="Fler" 
                 className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 xl:w-36 xl:h-36 object-contain"
               />
             </div>
