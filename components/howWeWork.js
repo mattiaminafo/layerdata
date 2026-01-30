@@ -41,14 +41,14 @@ export default function HowWeWork() {
             <div className="energy-line opacity-20 mb-12"></div>
             <div className="card border-white/10 p-8 sm:p-10">
               <h2 className="heading-secondary font-work-sans mb-8">
-                <span className="highlight-primary mx-1">Sempre</span> un primo audit per mappare l'azienda
+                <span className="highlight-primary mx-1">Sempre</span> un primo audit per mappare l&apos;azienda
               </h2>
               <p className="text-large font-work-sans mb-8">
                 Prima di iniziare qualsiasi progetto, facciamo sempre un audit completo per mappare la struttura aziendale, i processi esistenti e i dati attuali. Questo ci permette di capire esattamente dove intervenire e come ottimizzare.
               </p>
               
               <h3 className="heading-tertiary font-work-sans mb-6">
-                Cosa mappiamo nell'audit
+                Cosa mappiamo nell&apos;audit
               </h3>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start gap-3 text-body font-work-sans">

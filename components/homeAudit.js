@@ -15,7 +15,7 @@ export default function HomeAudit() {
         <div className="max-w-5xl mx-auto">
           {/* Title */}
           <h2 className="heading-secondary font-work-sans mb-12 text-left">
-            <span className="highlight-primary mx-1">Sempre</span> un primo audit per mappare l'azienda
+            <span className="highlight-primary mx-1">Sempre</span> un primo audit per mappare l&apos;azienda
           </h2>
 
           {/* Content */}
@@ -26,7 +26,7 @@ export default function HomeAudit() {
             
             <div className="card border-white/10 p-8 sm:p-10 mt-12">
               <h3 className="heading-tertiary font-work-sans mb-6">
-                Cosa mappiamo nell'audit
+                Cosa mappiamo nell&apos;audit
               </h3>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3 text-body font-work-sans">

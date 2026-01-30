@@ -92,7 +92,7 @@ export default function HomeAboutUs() {
                 Growth Engineer, esperto di web analytics e tracciamenti.
               </p>
               <p className="text-body font-work-sans">
-                Specializzato nell'implementazione di sistemi di tracking avanzati, analisi dei dati di conversione e ottimizzazione dei funnel.
+                Specializzato nell&apos;implementazione di sistemi di tracking avanzati, analisi dei dati di conversione e ottimizzazione dei funnel.
               </p>
             </div>
           </div>
