@@ -17,6 +17,8 @@ export default function LanguageSelector() {
     '/products': '/prodotti',
     '/prodotti': '/products',
     '/trainings': '/trainings', // Same in both languages
+    '/how-we-work': '/come-lavoriamo',
+    '/come-lavoriamo': '/how-we-work',
   };
   
   // Get the translated path for the target language

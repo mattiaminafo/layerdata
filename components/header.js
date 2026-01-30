@@ -27,14 +27,6 @@ export default function Header() {
             {t('header.about')}
           </a>
 
-          {/* Chi Siamo / About Us */}
-          <a 
-            href={`/${currentLang}/${currentLang === 'en' ? 'about-us' : 'chi-siamo'}`}
-            className="font-bold text-base py-2.5 px-4 transition-colors font-work-sans text-text-primary hover:text-highlight-primary"
-          >
-            {currentLang === 'en' ? 'About Us' : 'Chi Siamo'}
-          </a>
-
           {/* How we work */}
           <a 
             href={`/${currentLang}/${currentLang === 'en' ? 'how-we-work' : 'come-lavoriamo'}`}
@@ -84,15 +76,6 @@ export default function Header() {
             onClick={() => setIsMobileMenuOpen(false)}
           >
             {t('header.about')}
-          </a>
-
-          {/* Chi Siamo / About Us */}
-          <a 
-            href={`/${currentLang}/${currentLang === 'en' ? 'about-us' : 'chi-siamo'}`}
-            className="block text-text-primary hover:text-highlight-primary transition-colors text-base font-bold font-work-sans"
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            {currentLang === 'en' ? 'About Us' : 'Chi Siamo'}
           </a>
 
           {/* How we work */}

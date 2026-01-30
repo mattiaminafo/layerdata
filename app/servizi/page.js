@@ -1,5 +1,4 @@
 import Header from "../../components/header";
-import AboutUs from "../../components/aboutus";
 import Packages from "../../components/packages";
 import Tripwires from "../../components/tripwires";
 import CaseStudy from "../../components/casestudy";

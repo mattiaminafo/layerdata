@@ -1,9 +1,27 @@
 "use client";
 import { useTranslations } from "../lib/useTranslations";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function HomeAboutUs() {
-  const { t } = useTranslations();
+  const { t, currentLang } = useTranslations();
+  const [aboutUs, setAboutUs] = useState({});
+  
+  useEffect(() => {
+    // Force update when language changes
+    const data = t('aboutUs');
+    if (data && typeof data === 'object') {
+      setAboutUs(data);
+    }
+  }, [t, currentLang]);
+  
+  // Initial load
+  useEffect(() => {
+    const data = t('aboutUs');
+    if (data && typeof data === 'object') {
+      setAboutUs(data);
+    }
+  }, []);
 
   return (
     <section id="home-about-us" className="section-padding w-full bg-bg-primary">
@@ -17,10 +35,17 @@ export default function HomeAboutUs() {
           {/* Header */}
           <div className="text-center mb-16">
             <h2 className="heading-secondary font-work-sans mb-6">
-              <span className="highlight-primary mx-1">Chi</span> Siamo
+              {aboutUs.title ? (
+                <>
+                  <span className="highlight-primary mx-1">
+                    {aboutUs.title.split(' ')[0]}
+                  </span>
+                  {aboutUs.title.split(' ').slice(1).join(' ')}
+                </>
+              ) : aboutUs.title}
             </h2>
             <p className="text-large font-work-sans max-w-3xl mx-auto">
-              Due esperti che uniscono competenze tecniche e strategiche per trasformare i dati in valore per le aziende.
+              {aboutUs.subtitle}
             </p>
           </div>
 
@@ -38,7 +63,7 @@ export default function HomeAboutUs() {
                 />
               </div>
               <h3 className="heading-tertiary font-work-sans mb-2">
-                <span className="highlight-primary mx-1">Mattia</span>
+                <span className="highlight-primary mx-1">{aboutUs.mattia?.name || 'Mattia'}</span>
               </h3>
               <div className="mb-4">
                 <a
@@ -54,10 +79,10 @@ export default function HomeAboutUs() {
                 </a>
               </div>
               <p className="text-body font-work-sans mb-4">
-                Data Engineer ex Accenture, specializzato in database management e profilazione comportamentale degli utenti.
+                {aboutUs.mattia?.role}
               </p>
               <p className="text-body font-work-sans">
-                Esperto nella progettazione e gestione di architetture dati complesse, con focus su ottimizzazione delle performance e analisi comportamentale.
+                {aboutUs.mattia?.description}
               </p>
             </div>
 
@@ -73,7 +98,7 @@ export default function HomeAboutUs() {
                 />
               </div>
               <h3 className="heading-tertiary font-work-sans mb-2">
-                <span className="highlight-secondary mx-1">Enrico</span>
+                <span className="highlight-secondary mx-1">{aboutUs.enrico?.name || 'Enrico'}</span>
               </h3>
               <div className="mb-4">
                 <a
@@ -89,10 +114,10 @@ export default function HomeAboutUs() {
                 </a>
               </div>
               <p className="text-body font-work-sans mb-4">
-                Growth Engineer, esperto di web analytics e tracciamenti.
+                {aboutUs.enrico?.role}
               </p>
               <p className="text-body font-work-sans">
-                Specializzato nell&apos;implementazione di sistemi di tracking avanzati, analisi dei dati di conversione e ottimizzazione dei funnel.
+                {aboutUs.enrico?.description}
               </p>
             </div>
           </div>
