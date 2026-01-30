@@ -1,5 +1,5 @@
 import Header from "../../../components/header";
-import AboutUs from "../../../components/aboutUs";
+import AboutUs from "../../../components/aboutus";
 import ContactForm from "../../../components/contactForm";
 import Footer from "../../../components/footer";
 
